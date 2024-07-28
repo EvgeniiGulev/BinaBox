@@ -1,1 +1,191 @@
-body {}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.bakbak-one {
+  font-family: "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hidden-heading {
+  display: none;
+}
+
+.color-highlight {
+  background: transparent;
+  color: #21e786;
+}
+
+body {
+  font-family: "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background: #040b11;
+}
+
+.navbar li {
+  width: 82px;
+  height: 24px;
+  gap: 8px;
+}
+
+.navbar li a {
+  font-family: Bakbak One;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #fff;
+}
+
+.header-btn {
+  font-family: Bakbak One;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.is-theme {
+  background: #141b22;
+}
+
+.header-btn .discord-btn {
+  background: #141b22;
+  color: #fff;
+}
+
+.header-btn .connect-btn {
+  background: #21e786;
+  color: #141b22;
+}
+
+.main-text-container {
+  width: Hug 750px;
+  height: Hug 290px;
+  gap: 20px;
+  opacity: 0px;
+}
+
+.main-heading {
+  width: 750px;
+  height: 240px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 72px;
+  line-height: 80px;
+  text-align: left;
+  color: #fff;
+}
+
+.main-heading mark {
+  font-size: 72px;
+  line-height: 80px;
+  text-align: left;
+}
+
+.main-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+
+.total-item-num {
+  width: 117px;
+  height: 56px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0px 4px 13px 0px #ffffff66;
+}
+
+.item-num-subheading {
+  width: 147px;
+  height: 26px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #c2c3c5;
+}
+
+.profiles-whitelist-num {
+  width: 117px;
+  height: 56px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0px 4px 13px 0px #ffffff66;
+}
+
+.profiles-whitelist-subheading {
+  width: 147px;
+  height: 26px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #c2c3c5;
+}
+
+.connect-wallet-btn {
+  width: 181px;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  opacity: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  background-color: #21e786;
+  color: #141b22;
+}
+
+.main-whitelist-btn {
+  border: 2px solid #21e786;
+  width: 168px;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  opacity: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+}
