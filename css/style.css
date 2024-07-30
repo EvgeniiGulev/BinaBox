@@ -1,3 +1,35 @@
+:root {
+  /* Backgrounds */
+  --back-black-1: #0d0d11;
+  --back-black-2: #0b1217;
+  --back-gray-1: #141b22;
+  --back-gray-2: #1b2226;
+  --back-green: #307165;
+  /* Text */
+  --text-green: #21e786;
+  --text-white: #ffffff;
+  --text-gray-1: #c2c3c5;
+  --text-gray-2: #888b8e;
+  --text-gray-3: #141b22;
+  --text-gray-4: #1e2832;
+  --text-black-1: #040b11;
+  /* Buttons */
+  --primary-green: #21e786;
+  --primary-violet: #5865f2;
+  --primary-black: #141b22;
+  /* Gradients */
+  --gradient-default: linear-gradient(270deg, #2333de 0%, #0abe66 100%);
+  --gradient-gray: linear-gradient(180deg, #ffffff 0%, #ffffffe0 100%);
+  --gradient-green: linear-gradient(45deg, #21e786 0%, #21e786 100%);
+  --gradient-black: linear-gradient(315deg, #040b11 52%, #040b11 73%);
+  /* Transparent */
+  --transparent-green: #21e7861a;
+  --transparent-gray-1: #ffffff1a;
+  --transparent-gray-2: #ffffff0d;
+  --transparent-gray-3: #41454a66;
+  --transparent-gray-4: #c2c3c526;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +61,6 @@ body {
   font-family: "Bakbak One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 100%;
 }
 
 p {
@@ -38,18 +69,33 @@ p {
   font-style: normal;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
+/* Header Section */
+
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 108px;
   background: #040b11;
 }
 
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0;
+  margin: 0 61.5px 0 67.5px;
+}
+
 .navbar li {
-  width: 82px;
-  height: 24px;
-  gap: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar li a {
@@ -57,112 +103,183 @@ header {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-logo {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 42px;
   text-align: left;
-  color: #fff;
 }
 
 .header-btn {
-  font-family: Bakbak One;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 48px;
+  gap: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
 }
 
+.is-theme,
+.discord-btn,
+.connect-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discord-btn,
+.connect-btn {
+  padding: 12px 24px;
+  gap: 8px;
+  width: 147px;
+  height: 48px;
+}
+
 .is-theme {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
   background: #141b22;
+  border: none;
 }
 
 .header-btn .discord-btn {
   background: #141b22;
   color: #fff;
+  width: 149px;
+  height: 48px;
 }
 
 .header-btn .connect-btn {
   background: #21e786;
   color: #141b22;
+  width: 147px;
+  height: 48px;
+}
+
+/* Hero Section */
+.main-container {
+  width: 100%;
+  height: 846px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-image: url("../imgs/hero-section-glow.svg"),
+    url("../imgs/background-hero-star.svg"), var(--gradient-black);
+  background-size: auto, auto, cover;
+  background-position: 0 0, bottom right, center center;
+  background-repeat: no-repeat;
+}
+
+.main-inner-container {
+  width: 750px;
+  height: 500px;
+  position: relative;
+  left: 255px;
 }
 
 .main-text-container {
-  width: Hug 750px;
-  height: Hug 290px;
   gap: 20px;
-  opacity: 0px;
 }
 
 .main-heading {
   width: 750px;
   height: 240px;
-  gap: 0px;
-  opacity: 0px;
   font-size: 72px;
+  color: #ffffff;
   line-height: 80px;
-  text-align: left;
-  color: #fff;
+  gap: 20px;
 }
 
 .main-heading mark {
   font-size: 72px;
-  line-height: 80px;
   text-align: left;
 }
 
 .main-text {
   font-size: 20px;
   font-weight: 400;
-  line-height: 30px;
   text-align: left;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.main-info-container {
+  width: 373px;
+  height: 186px;
+  margin-top: 24px;
+  display: grid;
+  gap: 48px;
+  width: 373px;
+  height: 186px;
+}
+
+.main-info-text {
+  display: flex;
+  width: 345px;
+  height: 90px;
+  gap: 79px;
+  line-height: 26px;
 }
 
 .total-item-num {
   width: 117px;
   height: 56px;
-  gap: 0px;
-  opacity: 0px;
   font-size: 44px;
   line-height: 56px;
   text-align: left;
   color: #ffffff;
-  box-shadow: 0px 4px 13px 0px #ffffff66;
+  text-shadow: 0px 4px 13px #ffffff;
 }
 
 .item-num-subheading {
-  width: 147px;
-  height: 26px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   text-align: left;
   color: #c2c3c5;
+}
+.main-total-item,
+.main-profiles-whitelist {
+  display: grid;
+  gap: 8px;
 }
 
 .profiles-whitelist-num {
   width: 117px;
   height: 56px;
-  gap: 0px;
-  opacity: 0px;
   font-size: 44px;
   line-height: 56px;
   text-align: left;
   color: #ffffff;
-  box-shadow: 0px 4px 13px 0px #ffffff66;
+  text-shadow: 0px 4px 13px #ffffff;
 }
 
 .profiles-whitelist-subheading {
-  width: 147px;
-  height: 26px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   text-align: left;
   color: #c2c3c5;
+}
+
+.main-container-btn {
+  display: flex;
+  gap: 24px;
 }
 
 .connect-wallet-btn {
@@ -170,7 +287,6 @@ header {
   height: 48px;
   padding: 12px 24px 12px 24px;
   gap: 8px;
-  opacity: 0px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -180,15 +296,15 @@ header {
 }
 
 .main-whitelist-btn {
-  border: 2px solid #21e786;
+  outline: 2px solid #21e786;
   width: 168px;
-  height: 48px;
+  height: 46px;
   padding: 12px 24px 12px 24px;
-  gap: 8px;
-  opacity: 0px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: #fff;
+  color: #ffffff;
 }
+
+/* Products list section */
