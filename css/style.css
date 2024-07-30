@@ -22,6 +22,7 @@
   --gradient-gray: linear-gradient(180deg, #ffffff 0%, #ffffffe0 100%);
   --gradient-green: linear-gradient(45deg, #21e786 0%, #21e786 100%);
   --gradient-black: linear-gradient(315deg, #040b11 52%, #040b11 73%);
+  --gradient-test: linear-gradient(180deg, #141b22 0%, #040b11 100%);
   /* Transparent */
   --transparent-green: #21e7861a;
   --transparent-gray-1: #ffffff1a;
@@ -179,7 +180,7 @@ header {
   align-items: center;
   color: #ffffff;
   background-image: url("../imgs/hero-section-glow.svg"),
-    url("../imgs/background-hero-star.svg"), var(--gradient-black);
+    url("../imgs/background-hero-star.svg"), var(--gradient-test);
   background-size: auto, auto, cover;
   background-position: 0 0, bottom right, center center;
   background-repeat: no-repeat;
@@ -200,6 +201,7 @@ header {
   width: 750px;
   height: 240px;
   font-size: 72px;
+  font-weight: 400;
   color: #ffffff;
   line-height: 80px;
   gap: 20px;
