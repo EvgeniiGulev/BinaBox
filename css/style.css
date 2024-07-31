@@ -38,13 +38,13 @@
 }
 
 .bakbak-one {
-  font-family: "Bakbak One", sans-serif;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .poppins {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -59,7 +59,7 @@
 }
 
 body {
-  font-family: "Bakbak One", sans-serif;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   overflow: auto;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -105,7 +105,7 @@ header {
 }
 
 .navbar li a {
-  font-family: Bakbak One;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 16px;
   font-weight: inherit;
   line-height: 24px;
@@ -362,11 +362,12 @@ main {
 
 /* About us section */
 
-.about-content {
+.about-container {
   background-image: url("../imgs/about-back-star.svg");
   background-position: bottom left;
-  height: 100%;
-  width: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
 }
 
 .about-content-container {
@@ -418,14 +419,9 @@ main {
   height: 224px;
   display: grid;
   padding: 30px;
-}
-
-.about-card-item:nth-child(1) {
-  background-image: url("../imgs/about-top-glow.svg"),
-    url("../imgs/about-bottom-glow.svg");
-  background-position: top left, bottom right;
-  background-size: auto;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .about-card-heading + p {
@@ -436,28 +432,29 @@ main {
   position: relative;
   width: 100%;
   height: 66px;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.about-card-heading-container .about-card-number {
-  font-family: Bakbak One;
+.about-card-num {
   font-size: 80px;
-  line-height: 96px;
-  text-align: left;
-  width: max-content;
-  border: 1px solid #21e786;
+  font-family: "Bakbak One", Arial, sans-serif;
+  position: absolute;
+  stroke: #21e786;
+  stroke-width: 0.3;
+  fill: transparent;
 }
 
 .about-card-item h3 {
   font-size: 24px;
   font-weight: 400;
   text-align: left;
+  z-index: 1;
 }
 
-.about-card-item p {
+.about-card-item .about-card-text {
+  margin-top: 30px;
   width: 510px;
   height: 56px;
   font-weight: 400;
@@ -468,9 +465,134 @@ main {
 
 .read-more-btn {
   color: #ffffff;
-  width: max-content;
   height: 48px;
   padding: 12px 24px 12px 24px;
   border: 2px solid #21e786;
+  margin-top: 30px;
+}
+
+/* How to section */
+.how-to-inner-container {
+  width: 1410px;
+  height: 326px;
+  margin: 30px auto 0 auto;
+}
+
+.how-to-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: white;
+}
+
+.how-to-card-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.how-to-card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 210px;
+  background-color: #141b22;
+}
+
+.how-to-card-steps {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.how-to-card-text {
+  font-family: Bakbak One;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+}
+
+/* Road map section */
+.road-map-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.road-map-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: white;
+}
+
+.road-map-details-container {
+  margin-top: 60px;
+  width: 1410px;
+  height: 566px;
+  background-color: var(--transparent-gray-2);
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.road-map-imgs {
+  display: flex;
+}
+
+.road-map-imgs,
+.road-map-inner-imgs {
+  gap: 20px;
+}
+
+.road-map-inner-imgs {
+  display: flex;
+  flex-direction: column;
+}
+
+.road-map-stage-info {
+  margin-left: 79px;
+  height: 310px;
+}
+
+.road-map-details-heading {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+}
+
+.road-map-details {
+  list-style-type: none;
+}
+
+.road-map-details-item {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.road-map-text {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 12px;
+  color: #c2c3c5;
+}
+
+.road-map-stage-info .read-more-btn {
+  display: block;
+  width: max-content;
+  height: 48px;
   margin-top: 30px;
 }
