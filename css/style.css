@@ -1,4 +1,5 @@
 :root {
+  /* Ignore the unused vars I took from ui kit but half of them were useless :) */
   /* Backgrounds */
   --back-black-1: #0d0d11;
   --back-black-2: #0b1217;
@@ -87,6 +88,30 @@
   border: 2px solid transparent;
   border-image: linear-gradient(
     155deg,
+    #21e786 0%,
+    transparent 10%,
+    transparent 90%,
+    #21e786 100%
+  );
+  filter: blur(5px);
+  border-image-slice: 1;
+}
+
+/* Profile card corner glow */
+.profile-card.glow-container {
+  border-image-source: linear-gradient(
+    125deg,
+    #21e786 0%,
+    #141b22 10%,
+    #141b22 90%,
+    #21e786 100%
+  );
+}
+
+.profile-card.glow-container::before,
+.profile-card.glow-container::after {
+  border-image: linear-gradient(
+    125deg,
     #21e786 0%,
     transparent 10%,
     transparent 90%,
@@ -737,5 +762,346 @@ main {
 
 .phase-stage:nth-child(1) .phase-ellipse {
   background-color: #21e786;
-    box-shadow: 0 0 0 7.5px #21e7863d;
+  box-shadow: 0 0 0 7.5px #21e7863d;
+}
+
+/* Second background */
+.additional-section {
+  background-color: #0d0d11;
+}
+
+/* Out team section*/
+
+.team-container {
+  background-image: url("../imgs/background-team-star.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.team-inner-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1410px;
+  height: 824px;
+}
+
+.team-inner-container ul {
+  list-style-type: none;
+}
+
+.profile-cards {
+  margin-top: 60px;
+  display: grid;
+  gap: 30px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-card {
+  width: 330px;
+  height: 339px;
+  background-color: #141b22;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.profile-details {
+  display: grid;
+  margin: 30px 0;
+  gap: 4px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.profile-position {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: #c2c3c5;
+}
+
+.profile-social {
+  display: flex;
+  gap: 16px;
+  opacity: 50%;
+}
+
+/* Partner Section */
+.partner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-image: url("../imgs/background-partner-star.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+.partner-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.partner-logos {
+  width: 1410px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 60px;
+}
+
+.partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 100px;
+  gap: 10px;
+}
+
+.partner-item:nth-child(-n + 6):nth-child(2n),
+.partner-item:nth-child(n + 13):nth-child(2n) {
+  background-color: var(--text-gray-3);
+}
+.partner-item:nth-child(n + 7):nth-child(-n + 12):nth-child(2n + 1) {
+  background-color: var(--text-gray-3);
+}
+
+/* Faqs section */
+.faqs-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.faqs-heading {
+  font-family: "Bakbak One";
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+}
+
+.faqs-content {
+  margin-top: 60px;
+  display: grid;
+  gap: 24px;
+  background-image: linear-gradient(transparent 50%, var(--back-black-2) 50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqs-details {
+  min-height: 92px;
+  padding: 30px 20px 30px 20px;
+  background-color: #141b22;
+}
+
+.faqs-query {
+  width: 890px;
+  font-family: "Bakbak One";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #c2c3c5;
+  background-image: url("../imgs/plus.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  list-style-type: none;
+}
+
+.faqs-text {
+  margin-top: 16px;
+  width: 890px;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #c2c3c5;
+}
+
+.faqs-details[open] .faqs-query {
+  margin-bottom: 16px;
+  color: #ffffff;
+  background-image: url("../imgs/minus.svg");
+}
+
+/* Community section*/
+.community-container {
+  padding: 100px;
+  background-color: var(--back-black-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.community-text-container {
+  gap: 8px;
+}
+
+.community-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.community-subheading {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: #c2c3c5;
+}
+
+.community-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 352px;
+  height: 48px;
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin: 40px 0px;
+}
+
+.community-discord-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  background-color: #5865f2;
+  color: #ffffff;
+}
+
+.community-whitelist-btn {
+  width: 168px;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  background-color: #21e786;
+  color: #141b22;
+}
+
+.community-social-list {
+  display: flex;
+  list-style-type: none;
+  width: 400px;
+  height: 50px;
+  gap: 20px;
+}
+
+.community-social-item {
+  width: 50px;
+  height: 50px;
+  background-color: #141b22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer section */
+.page-footer {
+  background-color: var(--back-black-2);
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #434343;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 255px 15px 255px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-content: center;
+  width: 134px;
+  height: 30px;
+  gap: 16px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #ffffff;
+  margin-right: 60px;
+}
+
+.footer-copyright {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: right;
+  color: #c2c3c5;
+}
+
+.footer-navbar {
+  list-style-type: none;
+  display: flex;
+  height: 22px;
+  gap: 47px;
+}
+
+.footer-nav-item a {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: right;
+  color: #c2c3c5;
 }
