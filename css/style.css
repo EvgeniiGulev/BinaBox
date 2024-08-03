@@ -887,7 +887,6 @@ header {
   background-color: var(--text-green);
   color: var(--text-gray-3);
 }
-
 .home-page .subscribe-container {
   display: flex;
   margin-bottom: 30px;
@@ -1577,4 +1576,228 @@ header {
   line-height: 22px;
   text-align: right;
   color: var(--text-gray-1);
+}
+.catalog-item-page main {
+  background-color: var(--back-black-1);
+  width: 100%;
+}
+.product-container {
+  display: flex;
+  width: 1410px;
+  justify-content: space-between;
+  margin: 100px auto;
+}
+.product-img {
+  position: relative;
+  display: inline-block;
+}
+.countdown {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 608px;
+  height: 171px;
+  background-color: #ffffff4d;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-heading {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--text-white);
+}
+.countdown-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 459px;
+  height: 91px;
+  color: var(--text-white);
+}
+.countdown-item {
+  width: 67px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.countdown-spacer {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  align-self: flex-start;
+  color: var(--text-gray-1);
+}
+.countdown-time {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+}
+.time-tag {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.product-heading {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: left;
+  color: var(--text-white);
+}
+.product-description {
+  margin-top: 24px;
+  width: 620px;
+  height: 90px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #c2c3c5;
+}
+.tags-container {
+  margin: 20px 0 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 23px 16px;
+}
+.tag-container {
+  width: 196px;
+  height: 100px;
+  padding: 20px;
+  gap: 10px;
+  background-color: var(--text-gray-3);
+}
+.tags-container dt {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #c2c3c5;
+}
+.tags-container dd {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: var(--text-white);
+}
+.product-price {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: left;
+  color: var(--text-white);
+}
+.product-buy-btn {
+  margin-top: 40px;
+  width: 620px;
+  height: 56px;
+  top: 991px;
+  left: 1045px;
+  padding: 16px 24px 16px 24px;
+  gap: 8px;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-green);
+}
+.invitation-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.discord-link,
+.twitter-link {
+  width: 290px;
+  height: 56px;
+  padding: 16px 24px 16px 24px;
+  gap: 8px;
+  border: 2px solid var(--text-gray-2);
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--text-white);
+}
+.collections-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 204px;
+}
+.collections-heading {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: left;
+  color: var(--text-white);
+}
+.collection-cards {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.collection-card {
+  width: 330px;
+  height: 378px;
+  padding: 0 20px;
+  background-color: var(--transparent-gray-2);
+}
+.card-link {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: var(--text-white);
+  width: 100%;
+}
+.scroll-btns {
+  display: flex;
+  width: 120px;
+  height: 48px;
+  gap: 24px;
+}
+.collection-back-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--primary-green);
+  background-color: transparent;
+}
+.collection-forward-btn {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-color: var(--primary-green);
+}
+.collection-back-btn,
+.collection-forward-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
