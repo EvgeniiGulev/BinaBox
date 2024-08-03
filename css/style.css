@@ -1,12 +1,9 @@
 :root {
-  /* Ignore the unused vars I took from ui kit but half of them were useless :) */
-  /* Backgrounds */
   --back-black-1: #0d0d11;
   --back-black-2: #0b1217;
   --back-gray-1: #141b22;
   --back-gray-2: #1b2226;
   --back-green: #307165;
-  /* Text */
   --text-green: #21e786;
   --text-white: #ffffff;
   --text-gray-1: #c2c3c5;
@@ -14,68 +11,56 @@
   --text-gray-3: #141b22;
   --text-gray-4: #1e2832;
   --text-black-1: #040b11;
-  /* Buttons */
   --primary-green: #21e786;
   --primary-violet: #5865f2;
   --primary-black: #141b22;
-  /* Gradients */
   --gradient-default: linear-gradient(270deg, #2333de 0%, #0abe66 100%);
   --gradient-gray: linear-gradient(180deg, #ffffff 0%, #ffffffe0 100%);
   --gradient-green: linear-gradient(45deg, #21e786 0%, #21e786 100%);
   --gradient-black: linear-gradient(315deg, #040b11 52%, #040b11 73%);
   --gradient-hero: linear-gradient(180deg, #141b22 0%, #040b11 100%);
-  /* Transparent */
   --transparent-green: #21e7861a;
   --transparent-gray-1: #ffffff1a;
   --transparent-gray-2: #ffffff0d;
   --transparent-gray-3: #41454a66;
   --transparent-gray-4: #c2c3c526;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 .bakbak-one {
   font-family: "Bakbak One", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .poppins {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .hidden-heading {
   display: none;
 }
-
-/* Color Highlight*/
 .color-highlight {
   background: transparent;
-  color: #21e786;
+  color: var(--text-green);
 }
-
-/* Corner Glow */
 .glow-container {
   position: relative;
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
   border-width: 3px;
   border-style: solid;
   border-image-source: linear-gradient(
     155deg,
-    #21e786 0%,
-    #141b22 10%,
-    #141b22 90%,
-    #21e786 100%
+    var(--text-green) 0%,
+    var(--text-gray-3) 10%,
+    var(--text-gray-3) 90%,
+    var(--text-green) 100%
   );
   border-image-slice: 1;
 }
-
 .glow-container::before,
 .glow-container::after {
   content: "";
@@ -88,71 +73,60 @@
   border: 2px solid transparent;
   border-image: linear-gradient(
     155deg,
-    #21e786 0%,
+    var(--text-green) 0%,
     transparent 10%,
     transparent 90%,
-    #21e786 100%
+    var(--text-green) 100%
   );
   filter: blur(5px);
   border-image-slice: 1;
 }
-
-/* Profile card corner glow */
 .profile-card.glow-container {
   border-image-source: linear-gradient(
     125deg,
-    #21e786 0%,
-    #141b22 10%,
-    #141b22 90%,
-    #21e786 100%
+    var(--text-green) 0%,
+    var(--text-gray-3) 10%,
+    var(--text-gray-3) 90%,
+    var(--text-green) 100%
   );
 }
-
 .profile-card.glow-container::before,
 .profile-card.glow-container::after {
   border-image: linear-gradient(
     125deg,
-    #21e786 0%,
+    var(--text-green) 0%,
     transparent 10%,
     transparent 90%,
-    #21e786 100%
+    var(--text-green) 100%
   );
   filter: blur(5px);
   border-image-slice: 1;
 }
-
 body {
   font-family: "Bakbak One", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   overflow: auto;
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
-
 p {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 a {
   text-decoration: none;
 }
-
-/* Header Section */
-
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 108px;
-  background: #040b11;
+  background: var(--text-black-1);
 }
-
 .navbar {
   list-style-type: none;
   display: flex;
@@ -161,39 +135,34 @@ header {
   padding: 0;
   margin: 0 61.5px 0 67.5px;
 }
-
 .navbar li {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-
 .navbar li a {
-  font-family: "Bakbak One" sans-serif;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #ffffff;
+  color: var(--text-white);
   text-decoration: none;
   letter-spacing: 0.1em;
   line-height: 24px;
 }
-
 .nav-item::after {
   content: url("../imgs/arrow-down.svg");
   width: 24px;
   height: 24px;
 }
-
 .nav-item:nth-child(4)::after {
   content: "";
   width: 0;
   height: 0;
   gap: 0;
 }
-
 .nav-logo {
-  color: #ffffff;
+  color: var(--text-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,7 +172,6 @@ header {
   line-height: 42px;
   text-align: left;
 }
-
 .header-btn {
   display: flex;
   justify-content: center;
@@ -216,15 +184,14 @@ header {
   line-height: 24px;
   text-align: left;
 }
-
 .is-theme,
 .discord-btn,
 .connect-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--text-gray-3);
 }
-
 .discord-btn,
 .connect-btn {
   padding: 12px 24px;
@@ -232,78 +199,66 @@ header {
   width: 147px;
   height: 48px;
 }
-
 .is-theme {
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background: #141b22;
   border: none;
 }
-
 .header-btn .discord-btn {
-  background: #141b22;
-  color: #fff;
+  color: var(--text-white);
   width: 149px;
   height: 48px;
 }
-
 .header-btn .connect-btn {
-  background: #21e786;
-  color: #141b22;
+  background: var(--text-green);
+  color: var(--text-gray-3);
   width: 147px;
   height: 48px;
 }
-
-/* Main tag*/
 main {
   background-color: var(--back-black-1);
+  background-image: url("../imgs/background-how-to-star.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 43.5%;
 }
-
-/* Hero Section */
 .main-container {
   width: 100%;
   height: 846px;
-  color: #ffffff;
+  color: var(--text-white);
   background-image: url("../imgs/hero-section-glow.svg"),
     url("../imgs/background-hero-star.svg"), var(--gradient-hero);
   background-size: auto, auto, cover;
   background-position: 0 0, bottom right, center center;
   background-repeat: no-repeat;
 }
-
 .main-test {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .main-inner-container {
   width: max-content;
   height: 500px;
   position: relative;
   left: 154px;
 }
-
 .main-text-container {
   gap: 20px;
 }
-
 .main-heading {
   width: 750px;
   height: 240px;
   font-size: 72px;
   font-weight: inherit;
-  color: #ffffff;
+  color: var(--text-white);
   line-height: 80px;
   gap: 20px;
 }
-
 .main-heading mark {
   font-size: 72px;
   text-align: left;
 }
-
 .main-text {
   font-size: 20px;
   font-weight: inherit;
@@ -311,7 +266,6 @@ main {
   line-height: 30px;
   margin-top: 20px;
 }
-
 .main-info-container {
   width: 373px;
   height: 186px;
@@ -321,7 +275,6 @@ main {
   width: 373px;
   height: 186px;
 }
-
 .main-info-text {
   display: flex;
   width: 345px;
@@ -329,53 +282,47 @@ main {
   gap: 79px;
   line-height: 26px;
 }
-
 .total-item-num {
   width: 117px;
   height: 56px;
   font-size: 44px;
   line-height: 56px;
   text-align: left;
-  color: #ffffff;
-  text-shadow: 0px 4px 13px #ffffff;
+  color: var(--text-white);
+  text-shadow: 0px 4px 13px var(--text-white);
 }
-
 .item-num-subheading {
   font-size: 16px;
   font-weight: inherit;
   line-height: 26px;
   text-align: left;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
 .main-total-item,
 .main-profiles-whitelist {
   display: grid;
   gap: 8px;
 }
-
 .profiles-whitelist-num {
   width: 117px;
   height: 56px;
   font-size: 44px;
   line-height: 56px;
   text-align: left;
-  color: #ffffff;
-  text-shadow: 0px 4px 13px #ffffff;
+  color: var(--text-white);
+  text-shadow: 0px 4px 13px var(--text-white);
 }
-
 .profiles-whitelist-subheading {
   font-size: 16px;
   font-weight: inherit;
   line-height: 26px;
   text-align: left;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .main-container-btn {
   display: flex;
   gap: 24px;
 }
-
 .connect-wallet-btn {
   width: 181px;
   height: 48px;
@@ -385,22 +332,19 @@ main {
   font-weight: inherit;
   line-height: 24px;
   text-align: left;
-  background-color: #21e786;
-  color: #141b22;
+  background-color: var(--text-green);
+  color: var(--text-gray-3);
 }
-
 .main-whitelist-btn {
-  outline: 2px solid #21e786;
+  outline: 2px solid var(--text-green);
   width: 168px;
   height: 46px;
   padding: 12px 24px 12px 24px;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
-/* Products list section */
 .nft-card-container {
   width: 100%;
   height: max-content;
@@ -408,7 +352,6 @@ main {
   display: grid;
   overflow: hidden;
 }
-
 .nft-cards-list {
   display: flex;
   position: relative;
@@ -417,14 +360,12 @@ main {
   left: -105px;
   list-style-type: none;
 }
-
 .nft-card {
   background-color: var(--transparent-gray-2);
   width: 330px;
   display: grid;
   height: 378px;
 }
-
 .nft-content-container {
   padding: 20px 0 0 0;
   display: flex;
@@ -433,17 +374,13 @@ main {
   align-items: center;
   gap: 20px;
 }
-
 .nft-card a {
   width: 290px;
   font-size: 20px;
   line-height: 28px;
   text-align: left;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
-/* About us section */
-
 .about-container {
   background-image: url("../imgs/about-back-star.svg");
   background-position: bottom left;
@@ -451,16 +388,14 @@ main {
   height: 100vh;
   width: 100vw;
 }
-
 .about-content-container {
   width: 1410px;
   height: 772px;
   display: grid;
   place-items: center;
   margin: 0 auto;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .about-text-container {
   margin-top: 100px;
   text-align: center;
@@ -469,21 +404,18 @@ main {
   display: grid;
   gap: 16px;
 }
-
 .about-heading {
   font-size: 44px;
   font-weight: inherit;
   line-height: 56px;
 }
-
 .about-text {
   font-size: 18px;
   font-weight: inherit;
   line-height: 28px;
   text-align: center;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .about-cards {
   margin-top: 60px;
   list-style-type: none;
@@ -495,9 +427,8 @@ main {
   gap: 30px;
   position: relative;
 }
-
 .about-card-item {
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
   width: 570px;
   height: 224px;
   display: grid;
@@ -506,11 +437,9 @@ main {
   flex-direction: column;
   justify-content: flex-end;
 }
-
 .about-card-heading + p {
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .about-card-heading-container {
   position: relative;
   width: 100%;
@@ -519,23 +448,20 @@ main {
   flex-direction: column;
   justify-content: flex-end;
 }
-
 .about-card-num {
   font-size: 80px;
   font-family: "Bakbak One", Arial, sans-serif;
   position: absolute;
-  stroke: #21e786;
+  stroke: var(--text-green);
   stroke-width: 0.3;
   fill: transparent;
 }
-
 .about-card-item h3 {
   font-size: 24px;
   font-weight: 400;
   text-align: left;
   z-index: 1;
 }
-
 .about-card-item .about-card-text {
   margin-top: 30px;
   width: 510px;
@@ -543,39 +469,32 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .read-more-btn {
-  color: #ffffff;
+  color: var(--text-white);
   height: 48px;
   padding: 12px 24px 12px 24px;
-  border: 2px solid #21e786;
+  border: 2px solid var(--text-green);
   margin-top: 30px;
 }
-
-/* How to section */
-
 .how-to-inner-container {
   width: 1410px;
   height: 326px;
   margin: 30px auto 0 auto;
 }
-
 .how-to-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
-  color: white;
+  color: var(--text-white);
 }
-
 .how-to-card-list {
   display: flex;
   gap: 30px;
   margin-top: 60px;
 }
-
 .how-to-card-item {
   display: flex;
   flex-direction: column;
@@ -583,26 +502,22 @@ main {
   align-items: center;
   width: 330px;
   height: 210px;
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
 }
-
 .how-to-card-steps {
   font-size: 22px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
 }
-
 .how-to-card-text {
-  font-family: Bakbak One;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   text-align: center;
-  color: white;
+  color: var(--text-white);
 }
-
-/* Road map section */
 .road-map-container {
   margin-top: 100px;
   display: flex;
@@ -610,15 +525,13 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .road-map-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
-  color: white;
+  color: var(--text-white);
 }
-
 .road-map-details-container {
   margin-top: 60px;
   width: 1410px;
@@ -628,61 +541,49 @@ main {
   align-items: center;
   padding: 40px;
 }
-
 .road-map-imgs {
   display: flex;
 }
-
 .road-map-imgs,
 .road-map-inner-imgs {
   gap: 20px;
 }
-
 .road-map-inner-imgs {
   display: flex;
   flex-direction: column;
 }
-
 .road-map-stage-info {
   margin-left: 79px;
   height: 310px;
 }
-
 .road-map-details-heading {
   font-size: 36px;
   font-weight: 400;
   text-align: left;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .road-map-details {
   list-style-type: none;
 }
-
 .road-map-details-item {
   display: flex;
   align-items: center;
   margin-top: 22px;
 }
-
 .road-map-text {
-  font-family: Poppins;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   text-align: left;
   margin-left: 12px;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .road-map-stage-info .read-more-btn {
   display: block;
   width: max-content;
   height: 48px;
   margin-top: 30px;
 }
-
-/*Phase Slider*/
-/*Phase Slider*/
 .phase-slider-container {
   display: flex;
   width: 1407px;
@@ -691,7 +592,6 @@ main {
   justify-content: space-between;
   position: relative;
 }
-
 .phase-slider-container .back-arrow-btn,
 .phase-slider-container .forward-arrow-btn {
   width: 24px;
@@ -700,7 +600,6 @@ main {
   border: none;
   cursor: pointer;
 }
-
 .phase-line {
   list-style-type: none;
   display: flex;
@@ -709,19 +608,16 @@ main {
   width: 1107px;
   height: 66px;
   gap: 264px;
-  opacity: 0px;
   position: relative;
 }
-
 .phase-ellipse {
   width: 15px;
   height: 15px;
-  background: #888b8e;
+  background: var(--text-gray-2);
   box-shadow: 0 0 0 7.5px var(--transparent-gray-1);
   border-radius: 100%;
   border: none;
 }
-
 .phase-stage {
   display: flex;
   flex-direction: column;
@@ -729,16 +625,14 @@ main {
   align-items: center;
   gap: 16px;
 }
-
 .phase-stage p {
-  font-family: Bakbak One;
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
-  color: #888b8e;
+  color: var(--text-gray-2);
 }
-
 .phase-slider-container::before {
   content: "";
   position: absolute;
@@ -755,23 +649,16 @@ main {
   background-color: var(--transparent-gray-3);
   transform: translateY(-50%);
 }
-
 .phase-stage:nth-child(1) p {
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .phase-stage:nth-child(1) .phase-ellipse {
-  background-color: #21e786;
-  box-shadow: 0 0 0 7.5px #21e7863d;
+  background-color: var(--text-green);
+  box-shadow: 0 0 0 7.5px var(--text-green) 3d;
 }
-
-/* Second background */
 .additional-section {
-  background-color: #0d0d11;
+  background-color: var(--back-black-1);
 }
-
-/* Out team section*/
-
 .team-container {
   background-image: url("../imgs/background-team-star.svg");
   background-position: bottom left;
@@ -780,15 +667,13 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .team-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .team-inner-container {
   margin-top: 100px;
   display: flex;
@@ -798,65 +683,55 @@ main {
   width: 1410px;
   height: 824px;
 }
-
 .team-inner-container ul {
   list-style-type: none;
 }
-
 .profile-cards {
   margin-top: 60px;
   display: grid;
   gap: 30px;
 }
-
 .profile-row {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
-
 .profile-card {
   width: 330px;
   height: 339px;
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   padding: 40px 20px;
 }
-
 .profile-details {
   display: grid;
   margin: 30px 0;
   gap: 4px;
 }
-
 .profile-name {
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .profile-position {
-  font-family: Poppins;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .profile-social {
   display: flex;
   gap: 16px;
   opacity: 50%;
 }
-
-/* Partner Section */
 .partner-container {
   display: flex;
   justify-content: center;
@@ -866,15 +741,13 @@ main {
   background-position: bottom left;
   background-repeat: no-repeat;
 }
-
 .partner-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .partner-logos {
   width: 1410px;
   height: 360px;
@@ -883,7 +756,6 @@ main {
   grid-template-rows: repeat(3, 1fr);
   margin-top: 60px;
 }
-
 .partner-item {
   display: flex;
   align-items: center;
@@ -892,7 +764,6 @@ main {
   height: 100px;
   gap: 10px;
 }
-
 .partner-item:nth-child(-n + 6):nth-child(2n),
 .partner-item:nth-child(n + 13):nth-child(2n) {
   background-color: var(--text-gray-3);
@@ -900,25 +771,21 @@ main {
 .partner-item:nth-child(n + 7):nth-child(-n + 12):nth-child(2n + 1) {
   background-color: var(--text-gray-3);
 }
-
-/* Faqs section */
 .faqs-container {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .faqs-heading {
-  font-family: "Bakbak One";
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
 }
-
 .faqs-content {
   margin-top: 60px;
   display: grid;
@@ -930,27 +797,24 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .faqs-details {
   min-height: 92px;
   padding: 30px 20px 30px 20px;
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
 }
-
 .faqs-query {
   width: 890px;
-  font-family: "Bakbak One";
+  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
   background-image: url("../imgs/plus.svg");
   background-repeat: no-repeat;
   background-position: right;
   list-style-type: none;
 }
-
 .faqs-text {
   margin-top: 16px;
   width: 890px;
@@ -959,16 +823,13 @@ main {
   font-weight: 400;
   line-height: 28px;
   text-align: left;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .faqs-details[open] .faqs-query {
   margin-bottom: 16px;
-  color: #ffffff;
+  color: var(--text-white);
   background-image: url("../imgs/minus.svg");
 }
-
-/* Community section*/
 .community-container {
   padding: 100px;
   background-color: var(--back-black-2);
@@ -977,28 +838,24 @@ main {
   align-items: center;
   justify-content: center;
 }
-
 .community-text-container {
   gap: 8px;
 }
-
 .community-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-white);
 }
-
 .community-subheading {
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .community-btn {
   display: flex;
   justify-content: space-between;
@@ -1011,7 +868,6 @@ main {
   text-align: left;
   margin: 40px 0px;
 }
-
 .community-discord-btn {
   display: flex;
   justify-content: center;
@@ -1020,19 +876,17 @@ main {
   height: 48px;
   padding: 12px 24px 12px 24px;
   gap: 8px;
-  background-color: #5865f2;
-  color: #ffffff;
+  background-color: var(--primary-violet);
+  color: var(--text-white);
 }
-
 .community-whitelist-btn {
   width: 168px;
   height: 48px;
   padding: 12px 24px 12px 24px;
   gap: 8px;
-  background-color: #21e786;
-  color: #141b22;
+  background-color: var(--text-green);
+  color: var(--text-gray-3);
 }
-
 .community-social-list {
   display: flex;
   list-style-type: none;
@@ -1040,17 +894,14 @@ main {
   height: 50px;
   gap: 20px;
 }
-
 .community-social-item {
   width: 50px;
   height: 50px;
-  background-color: #141b22;
+  background-color: var(--text-gray-3);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* footer section */
 .page-footer {
   background-color: var(--back-black-2);
   width: 100%;
@@ -1061,12 +912,10 @@ main {
   justify-content: space-between;
   padding: 15px 255px 15px 255px;
 }
-
 .footer-left {
   display: flex;
   align-items: center;
 }
-
 .footer-logo-container {
   display: flex;
   align-content: center;
@@ -1077,31 +926,28 @@ main {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  color: #ffffff;
+  color: var(--text-white);
   margin-right: 60px;
 }
-
 .footer-copyright {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: right;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
-
 .footer-navbar {
   list-style-type: none;
   display: flex;
   height: 22px;
   gap: 47px;
 }
-
 .footer-nav-item a {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: right;
-  color: #c2c3c5;
+  color: var(--text-gray-1);
 }
