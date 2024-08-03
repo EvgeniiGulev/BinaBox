@@ -216,7 +216,7 @@ header {
   width: 147px;
   height: 48px;
 }
-main {
+.home-page main {
   background-color: var(--back-black-1);
   background-image: url("../imgs/background-how-to-star.svg");
   background-repeat: no-repeat;
@@ -654,7 +654,7 @@ main {
 }
 .phase-stage:nth-child(1) .phase-ellipse {
   background-color: var(--text-green);
-  box-shadow: 0 0 0 7.5px var(--text-green) 3d;
+  box-shadow: 0 0 0 7.5px var(--transparent-green);
 }
 .additional-section {
   background-color: var(--back-black-1);
@@ -887,6 +887,32 @@ main {
   background-color: var(--text-green);
   color: var(--text-gray-3);
 }
+
+.home-page .subscribe-container {
+  display: flex;
+  margin-bottom: 30px;
+}
+.home-page .subscribe-input {
+  border: 0;
+  width: 536px;
+  height: 56px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: var(--text-gray-1);
+  background-color: var(--text-gray-3);
+  padding: 16px 24px;
+}
+.home-page .subscribe-btn {
+  border: 0;
+  width: 154px;
+  height: 56px;
+  padding: 12px 24px 12px 24px;
+  background-color: var(--primary-green);
+  color: var(--text-black-1);
+}
 .community-social-list {
   display: flex;
   list-style-type: none;
@@ -944,6 +970,607 @@ main {
   gap: 47px;
 }
 .footer-nav-item a {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: right;
+  color: var(--text-gray-1);
+}
+.catalog-page main {
+  background-color: var(--back-black-1);
+  width: 100%;
+}
+.page-banner {
+  width: 100%;
+  height: 242px;
+  background-color: var(--back-gray-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-text-container {
+  width: max-content;
+  height: 88px;
+  gap: 12px;
+}
+.banner-heading {
+  color: var(--text-white);
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: left;
+  margin: 0 0 12px 0;
+}
+.banner-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+.banner-item a {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: var(--text-gray-2);
+}
+.banner-item:nth-child(2) a {
+  color: #21e786;
+}
+.banner-list li:first-child {
+  display: flex;
+}
+.banner-list li:first-child::after {
+  display: block;
+  margin: 0px 8px;
+  content: "";
+  width: 2px;
+  height: 16px;
+  background-color: var(--text-gray-2);
+}
+.catalog-section {
+  width: 1410px;
+  display: flex;
+  margin: 100px auto 0 auto;
+  padding-bottom: 204px;
+}
+.filter-options-container {
+  width: 280px;
+  height: 970px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter-category {
+  width: 280px;
+  min-height: 60px;
+  background-color: var(--back-gray-1);
+  gap: 151px;
+}
+.filter-query {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--text-white);
+  background-image: url("../imgs/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-size: 24px;
+  list-style-type: none;
+  padding: 16px 12px 16px 12px;
+  width: 100%;
+}
+.filter-category[open] .filter-query {
+  margin-bottom: 16px;
+  color: var(--text-white);
+  background-image: url("../imgs/minus.svg");
+  border: 1px solid #434343;
+  border-width: 0 0 1px 0;
+}
+.filter-type-list {
+  width: 100%;
+  list-style-type: none;
+  display: grid;
+  gap: 6px;
+  padding: 20px 23px 20px 23px;
+}
+.filter-type-item {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: var(--text-gray-1);
+}
+.filter-checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--text-gray-1);
+  background-color: transparent;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+.custom-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: url("../imgs/checkmark.svg") no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.filter-checkbox:checked + .custom-checkbox {
+  background-color: #21e786;
+  border-color: #21e786;
+}
+.filter-checkbox:checked + .custom-checkbox::before {
+  opacity: 1;
+}
+.catalog-header {
+  width: 1050px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-header h2 {
+  color: var(--text-white);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: left;
+}
+.catalog-search {
+  width: 280px;
+  height: 48px;
+  border: 0;
+  padding: 0 40px 0 10px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-gray-2);
+  font-size: 16px;
+  background: url("../imgs/search-2.svg") no-repeat right center;
+  background-color: var(--text-gray-3);
+  background-size: 20px 20px;
+  background-position: 95%;
+}
+.catalog-search::placeholder {
+  color: var(--text-gray-2);
+}
+.current-filters {
+  width: 1050px;
+  height: 68px;
+  padding: 12px 20px 12px 20px;
+  gap: 12px;
+  display: flex;
+  background-color: var(--back-gray-1);
+  margin-top: 20px;
+}
+.filter-list {
+  display: flex;
+  gap: 12px;
+  list-style-type: none;
+}
+.filter-item {
+  height: 44px;
+  gap: 10px;
+  border: 1px solid#41454A;
+  padding: 9px 13px 9px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-name {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #f7f7f7;
+}
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+}
+.clear-filters {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: var(--primary-green);
+  background-color: transparent;
+  border: 0;
+}
+.catalog-content-container {
+  margin-left: 80px;
+}
+.catalog-container {
+  width: 1050px;
+  height: 1194px;
+  margin-top: 40px;
+}
+.catalog-container ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+.catalog-container ul li {
+  background: var(--transparent-gray-2);
+  width: 330px;
+  height: 378px;
+}
+.catalog-container ul li a {
+  color: var(--text-white);
+  width: 290px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+.catalog-page .page-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 524px;
+  background-color: var(--primary-black);
+  border: 0;
+  padding: 0;
+  position: relative;
+}
+.catalog-page .community-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 1410px;
+  height: 246px;
+  border-radius: 8px;
+  background-image: url("../imgs/community-star-2.svg"),
+    url("../imgs/community-star-3.svg"),
+    linear-gradient(268.28deg, #2333de -1.34%, #0abe66 100%);
+  background-repeat: no-repeat;
+  background-size: 137px 137px, 321px 321px, cover;
+  background-position: 28% 2%, right center, center center;
+  overflow: hidden;
+}
+.catalog-page .community-container::before {
+  content: url("../imgs/community-star-1.svg");
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 100px;
+  height: auto;
+}
+.catalog-page .community-header {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: var(--text-white);
+}
+.catalog-page .community-text {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: var(--text-white);
+}
+.catalog-page .community-btn {
+  margin: 0;
+  padding: 0;
+  margin-top: 22px;
+}
+.catalog-page .footer-middle {
+  width: 1410px;
+  display: flex;
+  margin-top: 202px;
+  justify-content: space-between;
+}
+.catalog-page .footer-header {
+  width: 324px;
+  height: 106px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.catalog-page .footer-logo-container {
+  display: flex;
+  align-items: center;
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.catalog-page .footer-text {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: var(--text-white);
+}
+.catalog-page .footer-navbar {
+  display: flex;
+  gap: 130px;
+  margin-left: 156px;
+}
+.footer-navbar ul {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+}
+.footer-navbar h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-white);
+}
+.footer-navbar a {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #c2c3c5;
+}
+.subscription-container {
+  margin-left: 130px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  gap: 20px;
+}
+.subscribe-btn-container {
+  display: flex;
+}
+.subscription-container h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-white);
+}
+.footer-subscribe-input {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  width: 287px;
+  height: 56px;
+  padding: 14px 24px 14px 24px;
+  border: 0;
+  background-color: var(--transparent-gray-4);
+  color: var(--text-gray-1);
+}
+.footer-subscribe-btn {
+  display: block;
+  width: 154px;
+  height: 56px;
+  padding: 12px 24px 12px 24px;
+  background-color: var(--primary-green);
+  border: 0;
+}
+.catalog-page .footer-navbar ul {
+  display: grid;
+  gap: 16px;
+  list-style-type: none;
+}
+.footer-bottom {
+  padding: 15px 0;
+  border: 1px solid #434343;
+  border-width: 1px 0 0 0;
+  background-color: var(--primary-black);
+  display: flex;
+  justify-content: space-between;
+  width: 1410px;
+}
+.catalog-page .footer-copyright {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.footer-bottom .social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.footer-bottom .social-list a {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: right;
+  color: var(--text-gray-1);
+}
+.catalog-item-page .page-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 524px;
+  background-color: var(--primary-black);
+  border: 0;
+  padding: 0;
+  position: relative;
+}
+.catalog-item-page .community-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 1410px;
+  height: 246px;
+  border-radius: 8px;
+  background-image: url("../imgs/community-star-2.svg"),
+    url("../imgs/community-star-3.svg"),
+    linear-gradient(268.28deg, #2333de -1.34%, #0abe66 100%);
+  background-repeat: no-repeat;
+  background-size: 137px 137px, 321px 321px, cover;
+  background-position: 28% 2%, right center, center center;
+  overflow: hidden;
+}
+.catalog-item-page .community-header {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  color: var(--text-white);
+}
+.catalog-item-page .community-text {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: var(--text-white);
+}
+.catalog-item-page .community-btn {
+  margin: 0;
+  padding: 0;
+  margin-top: 22px;
+}
+.catalog-item-page .footer-middle {
+  width: 1410px;
+  display: flex;
+  margin-top: 202px;
+  justify-content: space-between;
+}
+.catalog-item-page .footer-header {
+  width: 324px;
+  height: 106px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.catalog-item-page .footer-logo-container {
+  display: flex;
+  align-items: center;
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.catalog-item-page .footer-text {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: var(--text-white);
+}
+.catalog-item-page .footer-navbar {
+  display: flex;
+  gap: 130px;
+  margin-left: 156px;
+}
+.catalog-item-page .footer-navbar ul {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  list-style-type: none;
+  gap: 16px;
+}
+.catalog-item-page .footer-navbar h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-white);
+}
+.catalog-item-page .footer-navbar a {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #c2c3c5;
+}
+.catalog-item-page .subscription-container {
+  margin-left: 130px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  gap: 20px;
+}
+.catalog-item-page .subscribe-btn-container {
+  display: flex;
+}
+.catalog-item-page .subscription-container h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-white);
+}
+.catalog-item-page .footer-subscribe-input {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  width: 287px;
+  height: 56px;
+  padding: 14px 24px;
+  border: 0;
+  background-color: var(--transparent-gray-4);
+  color: var(--text-gray-1);
+}
+.catalog-item-page .footer-subscribe-btn {
+  display: block;
+  width: 154px;
+  height: 56px;
+  padding: 12px 24px;
+  background-color: var(--primary-green);
+  border: 0;
+}
+.catalog-item-page .footer-bottom {
+  padding: 15px 0;
+  border: 1px solid #434343;
+  border-width: 1px 0 0 0;
+  background-color: var(--primary-black);
+  display: flex;
+  justify-content: space-between;
+  width: 1410px;
+}
+.catalog-item-page .footer-copyright {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.catalog-item-page .footer-bottom .social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.catalog-item-page .footer-bottom .social-list a {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
