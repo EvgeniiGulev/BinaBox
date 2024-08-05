@@ -364,7 +364,7 @@
               <a href="#" class="read-more-btn">READ MORE</a>
             </section>
           </div>
-          <div class="phase-slider-container">
+          <form class="phase-slider-container">
             <button class="back-arrow-btn">
               <img
                 src="./imgs/arrow-left-1.svg"
@@ -399,7 +399,7 @@
                 height="24"
               />
             </button>
-          </div>
+          </form>
         </section>
       </div>
       <div class="additional-section">
@@ -745,10 +745,16 @@
           </a>
           <a href="#" class="community-whitelist-btn"> WHITELIST NOW </a>
         </div>
-        <div class="subscribe-container">
-          <input type="text" id="subscribe" class="subscribe-input" placeholder="Enter your email">
-          <button class="subscribe-btn">SUBSCRIBE</button>
-        </div>
+        <form class="subscribe-container">
+          <input
+            type="email"
+            id="subscribe"
+            class="subscribe-input"
+            placeholder="Enter your email"
+            required
+          />
+          <button class="subscribe-btn" type="submit">SUBSCRIBE</button>
+        </form>
         <ul class="community-social-list">
           <li class="community-social-item">
             <a href="#"

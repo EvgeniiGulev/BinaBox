@@ -160,9 +160,12 @@
           <p class="product-price">
             PRICE: <mark class="color-highlight">0.15 ETH</mark>
           </p>
-          <button class="product-buy-btn">
-            <img src="./imgs/bag.svg" alt="BagIcon" />BUY ON OPENSEA
-          </button>
+          <form action="">
+            <button class="product-buy-btn" type="submit">
+              <img src="./imgs/bag.svg" alt="Bag icon" />
+              BUY ON OPENSEA
+            </button>
+          </form>
           <div class="invitation-container">
             <a href="#" class="discord-link"
               ><img
@@ -189,7 +192,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-1.svg"
+                src="./imgs/nft-card-1.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -199,7 +202,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-2.svg"
+                src="./imgs/nft-card-2.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -209,7 +212,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-3.svg"
+                src="./imgs/nft-card-3.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -219,7 +222,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-4.svg"
+                src="./imgs/nft-card-4.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -229,7 +232,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-5.svg"
+                src="./imgs/nft-card-5.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -239,7 +242,7 @@
           <li class="collection-card">
             <div class="nft-content-container">
               <img
-                src="./imgs/nft-card-6.svg"
+                src="./imgs/nft-card-6.jpg"
                 alt="good alt description"
                 class="collection-card-img"
               />
@@ -247,14 +250,22 @@
             </div>
           </li>
         </ul>
-        <div class="scroll-btns">
-          <button class="collection-back-btn">
-            <img src="./imgs/arrow-left-3.svg" alt="" />
+        <form class="scroll-btns" action="">
+          <button
+            type="button"
+            class="collection-back-btn"
+            aria-label="Go Back"
+          >
+            <img src="./imgs/arrow-left-3.svg" alt="Left arrow" />
           </button>
-          <button class="collection-forward-btn">
-            <img src="./imgs/arrow-right-3.svg" alt="">
+          <button
+            type="button"
+            class="collection-forward-btn"
+            aria-label="Go Forward"
+          >
+            <img src="./imgs/arrow-right-3.svg" alt="Right arrow" />
           </button>
-        </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
@@ -311,14 +322,18 @@
         </nav>
         <div class="subscription-container">
           <h3>SUBSCRIBE</h3>
-          <div class="subscribe-btn-container">
+          <form class="subscribe-btn-container">
             <input
               type="email"
-              placeholder="Enter your Email"
+              id="footer-subscribe-email"
+              placeholder="Enter your email"
               class="footer-subscribe-input"
+              required
             />
-            <button class="footer-subscribe-btn">SUBSCRIBE</button>
-          </div>
+            <button class="footer-subscribe-btn" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
         </div>
       </div>
       <div class="footer-bottom">
