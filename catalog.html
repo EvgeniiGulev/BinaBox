@@ -325,12 +325,26 @@
             />
           </div>
           <form class="current-filters" action="#" method="post">
+            <label class="hidden-heading" for="filter-king"
+              >Remove King filter</label
+            >
+            <label class="hidden-heading" for="filter-mix"
+              >Remove Mix filter</label
+            >
+            <label class="hidden-heading" for="filter-sakura"
+              >Remove Sakura filter</label
+            >
+            <label class="hidden-heading" for="clear-all"
+              >Clear all filters</label
+            >
+
             <ul class="filter-list">
               <li class="filter-item">
                 <p class="filter-name">King</p>
                 <button
                   type="button"
                   class="filter-btn"
+                  id="filter-king"
                   aria-label="Remove King filter"
                 >
                   <img src="./imgs/x.svg" alt="Remove filter" />
@@ -341,6 +355,7 @@
                 <button
                   type="button"
                   class="filter-btn"
+                  id="filter-mix"
                   aria-label="Remove Mix filter"
                 >
                   <img src="./imgs/x.svg" alt="Remove filter" />
@@ -351,15 +366,18 @@
                 <button
                   type="button"
                   class="filter-btn"
+                  id="filter-sakura"
                   aria-label="Remove Sakura filter"
                 >
                   <img src="./imgs/x.svg" alt="Remove filter" />
                 </button>
               </li>
             </ul>
+
             <button
               type="button"
               class="clear-filters"
+              id="clear-all"
               aria-label="Clear all filters"
             >
               Clear All
@@ -498,14 +516,21 @@
         </nav>
         <div class="subscription-container">
           <h3>SUBSCRIBE</h3>
-          <div class="subscribe-btn-container">
+          <form class="subscribe-btn-container">
+            <label class="hidden-heading" for="subscribe-email"
+              >Email for subscription</label
+            >
             <input
               type="email"
+              id="subscribe-email"
               placeholder="Enter your Email"
               class="footer-subscribe-input"
+              required
             />
-            <button class="footer-subscribe-btn">SUBSCRIBE</button>
-          </div>
+            <button class="footer-subscribe-btn" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
         </div>
       </div>
       <div class="footer-bottom">
@@ -540,10 +565,7 @@
           </li>
           <li class="social-item">
             <a href="#" class="social-link"
-              ><img
-                src="./imgs/community-3.svg"
-                alt="Youtube"
-                width="20"
+              ><img src="./imgs/community-3.svg" alt="Youtube" width="20"
             /></a>
           </li>
           <li class="social-item">
@@ -557,10 +579,7 @@
           </li>
           <li class="social-item">
             <a href="#" class="social-link"
-              ><img
-                src="./imgs/community-6.svg"
-                alt="Discord"
-                width="20"
+              ><img src="./imgs/community-6.svg" alt="Discord" width="20"
             /></a>
           </li>
         </ul>

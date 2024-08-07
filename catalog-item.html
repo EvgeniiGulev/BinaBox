@@ -159,7 +159,10 @@
             PRICE: <mark class="color-highlight">0.15 ETH</mark>
           </p>
           <form action="">
-            <button class="product-buy-btn" type="submit">
+            <label class="hidden-heading" for="buy-opensea"
+              >Buy on OpenSea</label
+            >
+            <button id="buy-opensea" class="product-buy-btn" type="submit">
               <img src="./imgs/bag.svg" alt="Bag icon" />
               BUY ON OPENSEA
             </button>
@@ -241,14 +244,21 @@
           </li>
         </ul>
         <form class="scroll-btns" action="">
+          <label class="hidden-heading" for="scroll-back">Navigate Back</label>
           <button
+            id="scroll-back"
             type="button"
             class="collection-back-btn"
             aria-label="Go Back"
           >
             <img src="./imgs/arrow-left-3.svg" alt="left arrow" />
           </button>
+
+          <label class="hidden-heading" for="scroll-forward"
+            >Navigate Forward</label
+          >
           <button
+            id="scroll-forward"
             type="button"
             class="collection-forward-btn"
             aria-label="Go Forward"
@@ -313,10 +323,13 @@
         <div class="subscription-container">
           <h3>SUBSCRIBE</h3>
           <form class="subscribe-btn-container">
+            <label class="hidden-heading" for="subscribe-email"
+              >Email for subscription</label
+            >
             <input
               type="email"
-              id="footer-subscribe-email"
-              placeholder="Enter your email"
+              id="subscribe-email"
+              placeholder="Enter your Email"
               class="footer-subscribe-input"
               required
             />
