@@ -107,6 +107,7 @@ body {
   font-weight: 400;
   font-style: normal;
   overflow: auto;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -353,7 +354,6 @@ header {
   align-items: center;
   padding-bottom: 204px;
   overflow: hidden;
-  overflow: hidden;
 }
 .nft-cards-list {
   display: flex;
@@ -386,8 +386,7 @@ header {
   background-image: url("../imgs/about-back-star.svg");
   background-position: bottom left;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 .about-content-container {
   width: 1410px;
