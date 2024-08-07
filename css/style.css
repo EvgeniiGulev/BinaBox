@@ -387,7 +387,7 @@ header {
   background-position: bottom left;
   background-repeat: no-repeat;
   width: 100%;
-      display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -397,7 +397,7 @@ header {
   height: 772px;
   display: grid;
   place-items: center;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1445,6 +1445,14 @@ header {
   background-size: 137px 137px, 321px 321px, cover;
   background-position: 28% 2%, right center, center center;
   overflow: hidden;
+}
+.catalog-item-page .community-container::before {
+  content: url("../imgs/community-star-1.svg");
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 100px;
+  height: auto;
 }
 .catalog-item-page .community-header {
   font-size: 44px;
