@@ -1,3 +1,40 @@
+.bakbak-one,
+.poppins,
+body,
+p {
+  font-style: normal;
+  font-weight: 400;
+}
+.nav-logo,
+header {
+  justify-content: center;
+}
+*,
+.navbar {
+  padding: 0;
+}
+.bakbak-one,
+.navbar li a,
+.poppins,
+body,
+p {
+  font-weight: 400;
+}
+.navbar li a,
+a {
+  text-decoration: none;
+}
+.about-cards,
+.banner-list,
+.faqs-query,
+.footer-navbar,
+.navbar,
+.nft-cards-list,
+.phase-line,
+.road-map-details,
+.team-inner-container ul {
+  list-style-type: none;
+}
 :root {
   --back-black-1: #0d0d11;
   --back-black-2: #0b1217;
@@ -27,25 +64,44 @@
 }
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 .bakbak-one {
   font-family: "Bakbak One", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
-.poppins {
-  font-family: "Poppins", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.poppins,
+p {
+  font-family: Poppins, Arial, sans-serif;
+}
+.about-card-num,
+.how-to-card-text,
+.navbar li a,
+.phase-stage p,
+body {
+  font-family: "Bakbak One", Arial, sans-serif;
+}
+.about-heading,
+.about-text,
+.connect-wallet-btn,
+.header-btn,
+.main-heading,
+.main-text,
+.nav-logo {
+  font-weight: inherit;
 }
 .hidden-heading {
   display: none;
 }
 .color-highlight {
-  background: transparent;
+  background: #fff0;
   color: var(--text-green);
+}
+.header-btn .discord-btn,
+.main-container,
+.main-heading,
+.nav-logo,
+.navbar li a {
+  color: var(--text-white);
 }
 .glow-container {
   position: relative;
@@ -61,8 +117,8 @@
   );
   border-image-slice: 1;
 }
-.glow-container::before,
-.glow-container::after {
+.glow-container::after,
+.glow-container::before {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -70,7 +126,7 @@
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border: 2px solid transparent;
+  border: 2px solid #fff0;
   border-image: linear-gradient(
     155deg,
     var(--text-green) 0%,
@@ -90,8 +146,8 @@
     var(--text-green) 100%
   );
 }
-.profile-card.glow-container::before,
-.profile-card.glow-container::after {
+.profile-card.glow-container::after,
+.profile-card.glow-container::before {
   border-image: linear-gradient(
     125deg,
     var(--text-green) 0%,
@@ -103,37 +159,22 @@
   border-image-slice: 1;
 }
 body {
-  font-family: "Bakbak One", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
   overflow: auto;
-  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-p {
-  font-family: "Poppins", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-a {
-  text-decoration: none;
-}
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 108px;
   background: var(--text-black-1);
 }
 .navbar {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   gap: 32px;
-  padding: 0;
   margin: 0 61.5px 0 67.5px;
 }
 .navbar li {
@@ -142,17 +183,12 @@ header {
   gap: 4px;
 }
 .navbar li a {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var(--text-white);
-  text-decoration: none;
   letter-spacing: 0.1em;
   line-height: 24px;
 }
 .nav-item::after {
-  content: url("../imgs/arrow-down.svg");
+  content: url(../imgs/arrow-down.svg);
   width: 24px;
   height: 24px;
 }
@@ -163,13 +199,10 @@ header {
   gap: 0;
 }
 .nav-logo {
-  color: var(--text-white);
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 16px;
   font-size: 32px;
-  font-weight: inherit;
   line-height: 42px;
   text-align: left;
 }
@@ -181,20 +214,24 @@ header {
   height: 48px;
   gap: 20px;
   font-size: 16px;
-  font-weight: inherit;
   line-height: 24px;
   text-align: left;
 }
-.is-theme,
+.connect-btn,
 .discord-btn,
-.connect-btn {
+.is-theme {
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--text-gray-3);
 }
-.discord-btn,
-.connect-btn {
+.about-container,
+.home-page main,
+.main-container {
+  background-repeat: no-repeat;
+}
+.connect-btn,
+.discord-btn {
   padding: 12px 24px;
   gap: 8px;
   width: 147px;
@@ -207,7 +244,6 @@ header {
   border: none;
 }
 .header-btn .discord-btn {
-  color: var(--text-white);
   width: 149px;
   height: 48px;
 }
@@ -219,20 +255,19 @@ header {
 }
 .home-page main {
   background-color: var(--back-black-1);
-  background-image: url("../imgs/background-how-to-star.svg");
-  background-repeat: no-repeat;
+  background-image: url(../imgs/background-how-to-star.svg);
   background-position: 100% 43.5%;
 }
 .main-container {
   width: 100%;
   height: 846px;
-  color: var(--text-white);
-  background-image: url("../imgs/hero-section-glow.svg"),
-    url("../imgs/background-hero-star.svg"), var(--gradient-hero);
+  background-image: url(../imgs/hero-section-glow.svg),
+    url(../imgs/background-hero-star.svg), var(--gradient-hero);
   background-size: auto, auto, cover;
   background-position: 0 0, bottom right, center center;
-  background-repeat: no-repeat;
 }
+.collection-back-btn,
+.collection-forward-btn,
 .main-test {
   display: flex;
   justify-content: center;
@@ -244,15 +279,15 @@ header {
   position: relative;
   left: 154px;
 }
-.main-text-container {
+.main-text-container,
+.road-map-imgs,
+.road-map-inner-imgs {
   gap: 20px;
 }
 .main-heading {
   width: 750px;
   height: 240px;
   font-size: 72px;
-  font-weight: inherit;
-  color: var(--text-white);
   line-height: 80px;
   gap: 20px;
 }
@@ -262,14 +297,11 @@ header {
 }
 .main-text {
   font-size: 20px;
-  font-weight: inherit;
   text-align: left;
   line-height: 30px;
   margin-top: 20px;
 }
 .main-info-container {
-  width: 373px;
-  height: 186px;
   margin-top: 24px;
   display: grid;
   gap: 48px;
@@ -283,6 +315,7 @@ header {
   gap: 79px;
   line-height: 26px;
 }
+.profiles-whitelist-num,
 .total-item-num {
   width: 117px;
   height: 56px;
@@ -290,35 +323,27 @@ header {
   line-height: 56px;
   text-align: left;
   color: var(--text-white);
-  text-shadow: 0px 4px 13px var(--text-white);
+  text-shadow: 0 4px 13px var(--text-white);
 }
-.item-num-subheading {
-  font-size: 16px;
-  font-weight: inherit;
-  line-height: 26px;
-  text-align: left;
-  color: var(--text-gray-1);
-}
-.main-total-item,
-.main-profiles-whitelist {
-  display: grid;
-  gap: 8px;
-}
-.profiles-whitelist-num {
-  width: 117px;
-  height: 56px;
-  font-size: 44px;
-  line-height: 56px;
-  text-align: left;
-  color: var(--text-white);
-  text-shadow: 0px 4px 13px var(--text-white);
-}
+.item-num-subheading,
 .profiles-whitelist-subheading {
   font-size: 16px;
   font-weight: inherit;
   line-height: 26px;
   text-align: left;
   color: var(--text-gray-1);
+}
+.connect-wallet-btn,
+.main-whitelist-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+.main-profiles-whitelist,
+.main-total-item {
+  display: grid;
+  gap: 8px;
 }
 .main-container-btn {
   display: flex;
@@ -327,12 +352,7 @@ header {
 .connect-wallet-btn {
   width: 181px;
   height: 48px;
-  padding: 12px 24px 12px 24px;
   gap: 8px;
-  font-size: 16px;
-  font-weight: inherit;
-  line-height: 24px;
-  text-align: left;
   background-color: var(--text-green);
   color: var(--text-gray-3);
 }
@@ -340,10 +360,6 @@ header {
   outline: 2px solid var(--text-green);
   width: 168px;
   height: 46px;
-  padding: 12px 24px 12px 24px;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: left;
   color: var(--text-white);
 }
 .nft-card-container {
@@ -359,7 +375,6 @@ header {
   display: flex;
   margin-top: 60px;
   gap: 30px;
-  list-style-type: none;
 }
 .nft-card {
   background-color: var(--transparent-gray-2);
@@ -367,8 +382,12 @@ header {
   display: grid;
   height: 378px;
 }
+.about-card-item,
+.how-to-card-item {
+  background-color: var(--text-gray-3);
+}
 .nft-content-container {
-  padding: 20px 0 0 0;
+  padding: 20px 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -383,9 +402,8 @@ header {
   color: var(--text-white);
 }
 .about-container {
-  background-image: url("../imgs/about-back-star.svg");
+  background-image: url(../imgs/about-back-star.svg);
   background-position: bottom left;
-  background-repeat: no-repeat;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -403,6 +421,10 @@ header {
   align-items: center;
   color: var(--text-white);
 }
+.about-card-heading + p,
+.about-text {
+  color: var(--text-gray-1);
+}
 .about-text-container {
   margin-top: 100px;
   text-align: center;
@@ -413,19 +435,15 @@ header {
 }
 .about-heading {
   font-size: 44px;
-  font-weight: inherit;
   line-height: 56px;
 }
 .about-text {
   font-size: 18px;
-  font-weight: inherit;
   line-height: 28px;
   text-align: center;
-  color: var(--text-gray-1);
 }
 .about-cards {
   margin-top: 60px;
-  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -435,7 +453,6 @@ header {
   position: relative;
 }
 .about-card-item {
-  background-color: var(--text-gray-3);
   width: 570px;
   height: 224px;
   display: grid;
@@ -443,9 +460,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-.about-card-heading + p {
-  color: var(--text-gray-1);
 }
 .about-card-heading-container {
   position: relative;
@@ -457,11 +471,10 @@ header {
 }
 .about-card-num {
   font-size: 80px;
-  font-family: "Bakbak One", Arial, sans-serif;
   position: absolute;
   stroke: var(--text-green);
   stroke-width: 0.3;
-  fill: transparent;
+  fill: #fff0;
 }
 .about-card-item h3 {
   font-size: 24px;
@@ -481,7 +494,7 @@ header {
 .read-more-btn {
   color: var(--text-white);
   height: 48px;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   border: 2px solid var(--text-green);
   margin-top: 30px;
 }
@@ -494,7 +507,13 @@ header {
   align-items: center;
   margin-top: 148px;
 }
-.how-to-heading {
+.catalog-item-page .community-header,
+.catalog-page .community-header,
+.community-heading,
+.how-to-heading,
+.partner-heading,
+.road-map-heading,
+.team-heading {
   font-size: 44px;
   font-weight: 400;
   line-height: 56px;
@@ -513,7 +532,6 @@ header {
   align-items: center;
   width: 330px;
   height: 210px;
-  background-color: var(--text-gray-3);
 }
 .how-to-card-steps {
   font-size: 22px;
@@ -522,12 +540,21 @@ header {
   text-align: center;
 }
 .how-to-card-text {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   text-align: center;
   color: var(--text-white);
+}
+.profile-position,
+.road-map-text {
+  font-family: Poppins, Arial, sans-serif;
+}
+.phase-stage p,
+.road-map-details-heading,
+.road-map-text {
+  text-align: left;
+  font-weight: 400;
 }
 .road-map-container {
   margin-top: 100px;
@@ -535,13 +562,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.road-map-heading {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
 }
 .road-map-details-container {
   margin-top: 60px;
@@ -552,12 +572,11 @@ header {
   align-items: center;
   padding: 40px;
 }
-.road-map-imgs {
-  display: flex;
-}
+.banner-list li:first-child,
+.catalog-item-page .subscribe-btn-container,
 .road-map-imgs,
-.road-map-inner-imgs {
-  gap: 20px;
+.subscribe-btn-container {
+  display: flex;
 }
 .road-map-inner-imgs {
   display: flex;
@@ -567,14 +586,15 @@ header {
   margin-left: 79px;
   height: 310px;
 }
+.phase-line,
+.phase-slider-container {
+  height: 66px;
+  position: relative;
+  display: flex;
+}
 .road-map-details-heading {
   font-size: 36px;
-  font-weight: 400;
-  text-align: left;
   color: var(--text-white);
-}
-.road-map-details {
-  list-style-type: none;
 }
 .road-map-details-item {
   display: flex;
@@ -582,12 +602,13 @@ header {
   margin-top: 22px;
 }
 .road-map-text {
-  font-family: "Poppins", Arial, sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  text-align: left;
   margin-left: 12px;
   color: var(--text-gray-1);
+}
+.phase-stage:first-child p,
+.profile-name {
+  color: var(--text-white);
 }
 .road-map-stage-info .read-more-btn {
   display: block;
@@ -596,30 +617,23 @@ header {
   margin-top: 30px;
 }
 .phase-slider-container {
-  display: flex;
   width: 1407px;
-  height: 66px;
   margin-top: 24px;
   justify-content: space-between;
-  position: relative;
 }
 .phase-slider-container .back-arrow-btn,
 .phase-slider-container .forward-arrow-btn {
   width: 24px;
   height: 24px;
-  background-color: transparent;
+  background-color: #fff0;
   border: none;
   cursor: pointer;
 }
 .phase-line {
-  list-style-type: none;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 1107px;
-  height: 66px;
   gap: 264px;
-  position: relative;
 }
 .phase-ellipse {
   width: 15px;
@@ -629,6 +643,11 @@ header {
   border-radius: 100%;
   border: none;
 }
+.partner-container,
+.team-container {
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
 .phase-stage {
   display: flex;
   flex-direction: column;
@@ -637,11 +656,8 @@ header {
   gap: 16px;
 }
 .phase-stage p {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 28px;
-  text-align: left;
   color: var(--text-gray-2);
 }
 .phase-slider-container::before {
@@ -660,30 +676,25 @@ header {
   background-color: var(--transparent-gray-3);
   transform: translateY(-50%);
 }
-.phase-stage:nth-child(1) p {
-  color: var(--text-white);
-}
-.phase-stage:nth-child(1) .phase-ellipse {
+.phase-stage:first-child .phase-ellipse {
   background-color: var(--text-green);
   box-shadow: 0 0 0 7.5px var(--transparent-green);
 }
 .additional-section {
   background-color: var(--back-black-1);
 }
+.faqs-details,
+.partner-item:nth-child(-n + 6):nth-child(2n),
+.partner-item:nth-child(n + 13):nth-child(2n),
+.partner-item:nth-child(n + 7):nth-child(-n + 12):nth-child(odd),
+.profile-card {
+  background-color: var(--text-gray-3);
+}
 .team-container {
-  background-image: url("../imgs/background-team-star.svg");
-  background-position: bottom left;
-  background-repeat: no-repeat;
+  background-image: url(../imgs/background-team-star.svg);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.team-heading {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
 }
 .team-inner-container {
   margin-top: 100px;
@@ -693,9 +704,6 @@ header {
   align-items: center;
   width: 1410px;
   height: 824px;
-}
-.team-inner-container ul {
-  list-style-type: none;
 }
 .profile-cards {
   margin-top: 60px;
@@ -711,7 +719,6 @@ header {
 .profile-card {
   width: 330px;
   height: 339px;
-  background-color: var(--text-gray-3);
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -728,15 +735,18 @@ header {
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  color: var(--text-white);
 }
 .profile-position {
-  font-family: "Poppins", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
   color: var(--text-gray-1);
+}
+.faqs-heading,
+.faqs-query {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-weight: 400;
 }
 .profile-social {
   display: flex;
@@ -748,16 +758,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  background-image: url("../imgs/background-partner-star.svg");
-  background-position: bottom left;
-  background-repeat: no-repeat;
-}
-.partner-heading {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
+  background-image: url(../imgs/background-partner-star.svg);
 }
 .partner-logos {
   width: 1410px;
@@ -775,13 +776,6 @@ header {
   height: 100px;
   gap: 10px;
 }
-.partner-item:nth-child(-n + 6):nth-child(2n),
-.partner-item:nth-child(n + 13):nth-child(2n) {
-  background-color: var(--text-gray-3);
-}
-.partner-item:nth-child(n + 7):nth-child(-n + 12):nth-child(2n + 1) {
-  background-color: var(--text-gray-3);
-}
 .faqs-container {
   margin-top: 100px;
   display: flex;
@@ -791,9 +785,7 @@ header {
   color: var(--text-white);
 }
 .faqs-heading {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 44px;
-  font-weight: 400;
   line-height: 56px;
   text-align: center;
 }
@@ -808,38 +800,41 @@ header {
   justify-content: center;
   align-items: center;
 }
+.faqs-query,
+.filter-query {
+  background-image: url(../imgs/plus.svg);
+  background-repeat: no-repeat;
+}
+.faqs-query,
+.faqs-text {
+  width: 890px;
+  text-align: left;
+}
 .faqs-details {
   min-height: 92px;
-  padding: 30px 20px 30px 20px;
-  background-color: var(--text-gray-3);
+  padding: 30px 20px;
 }
 .faqs-query {
-  width: 890px;
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
-  font-weight: 400;
   line-height: 30px;
-  text-align: left;
   color: var(--text-gray-1);
-  background-image: url("../imgs/plus.svg");
-  background-repeat: no-repeat;
   background-position: right;
-  list-style-type: none;
+}
+.community-subheading,
+.faqs-text {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-gray-1);
+  font-weight: 400;
 }
 .faqs-text {
   margin-top: 16px;
-  width: 890px;
   height: 56px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  text-align: left;
-  color: var(--text-gray-1);
 }
 .faqs-details[open] .faqs-query {
   margin-bottom: 16px;
   color: var(--text-white);
-  background-image: url("../imgs/minus.svg");
+  background-image: url(../imgs/minus.svg);
 }
 .community-container {
   padding: 100px;
@@ -852,20 +847,9 @@ header {
 .community-text-container {
   gap: 8px;
 }
-.community-heading {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
-}
 .community-subheading {
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
+  font-family: Inter, Arial, sans-serif;
   text-align: center;
-  color: var(--text-gray-1);
 }
 .community-btn {
   display: flex;
@@ -877,7 +861,7 @@ header {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
 .community-discord-btn {
   display: flex;
@@ -885,15 +869,20 @@ header {
   align-items: center;
   width: 147px;
   height: 48px;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   gap: 8px;
   background-color: var(--primary-violet);
   color: var(--text-white);
 }
+.community-social-item,
+.page-banner {
+  justify-content: center;
+  display: flex;
+}
 .community-whitelist-btn {
   width: 168px;
   height: 48px;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   gap: 8px;
   background-color: var(--text-green);
   color: var(--text-gray-3);
@@ -906,7 +895,7 @@ header {
   border: 0;
   width: 536px;
   height: 56px;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -919,7 +908,7 @@ header {
   border: 0;
   width: 154px;
   height: 56px;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   background-color: var(--primary-green);
   color: var(--text-black-1);
 }
@@ -934,8 +923,6 @@ header {
   width: 50px;
   height: 50px;
   background-color: var(--text-gray-3);
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .page-footer {
@@ -946,7 +933,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 255px 15px 255px;
+  padding: 15px 255px;
+}
+.filter-category,
+.page-banner {
+  background-color: var(--back-gray-1);
 }
 .footer-left {
   display: flex;
@@ -965,28 +956,29 @@ header {
   color: var(--text-white);
   margin-right: 60px;
 }
-.footer-copyright {
-  font-family: "Poppins", Arial, sans-serif;
+.catalog-item-page .footer-bottom .social-list a,
+.footer-bottom .social-list a,
+.footer-copyright,
+.footer-nav-item a {
+  font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: right;
   color: var(--text-gray-1);
 }
+.banner-heading,
+.banner-item a,
+.filter-query {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-weight: 400;
+}
 .footer-navbar {
-  list-style-type: none;
   display: flex;
   height: 22px;
   gap: 47px;
 }
-.footer-nav-item a {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: right;
-  color: var(--text-gray-1);
-}
+.catalog-item-page main,
 .catalog-page main {
   background-color: var(--back-black-1);
   width: 100%;
@@ -994,9 +986,6 @@ header {
 .page-banner {
   width: 100%;
   height: 242px;
-  background-color: var(--back-gray-1);
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .banner-text-container {
@@ -1006,23 +995,18 @@ header {
 }
 .banner-heading {
   color: var(--text-white);
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 44px;
-  font-weight: 400;
   line-height: 56px;
   text-align: left;
-  margin: 0 0 12px 0;
+  margin: 0 0 12px;
 }
 .banner-list {
   display: flex;
-  list-style-type: none;
   justify-content: center;
   align-items: center;
 }
 .banner-item a {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: var(--text-gray-2);
@@ -1030,12 +1014,9 @@ header {
 .banner-item:nth-child(2) a {
   color: #21e786;
 }
-.banner-list li:first-child {
-  display: flex;
-}
 .banner-list li:first-child::after {
   display: block;
-  margin: 0px 8px;
+  margin: 0 8px;
   content: "";
   width: 2px;
   height: 16px;
@@ -1044,7 +1025,7 @@ header {
 .catalog-section {
   width: 1410px;
   display: flex;
-  margin: 100px auto 0 auto;
+  margin: 100px auto 0;
   padding-bottom: 204px;
 }
 .filter-options-container {
@@ -1057,44 +1038,47 @@ header {
 .filter-category {
   width: 280px;
   min-height: 60px;
-  background-color: var(--back-gray-1);
   gap: 151px;
 }
+.filter-query,
+.filter-type-list {
+  width: 100%;
+  list-style-type: none;
+}
 .filter-query {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 28px;
   color: var(--text-white);
-  background-image: url("../imgs/plus.svg");
-  background-repeat: no-repeat;
   background-position: 95%;
   background-size: 24px;
-  list-style-type: none;
-  padding: 16px 12px 16px 12px;
-  width: 100%;
+  padding: 16px 12px;
 }
 .filter-category[open] .filter-query {
   margin-bottom: 16px;
   color: var(--text-white);
-  background-image: url("../imgs/minus.svg");
+  background-image: url(../imgs/minus.svg);
   border: 1px solid #434343;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 1px;
 }
 .filter-type-list {
-  width: 100%;
-  list-style-type: none;
   display: grid;
   gap: 6px;
-  padding: 20px 23px 20px 23px;
+  padding: 20px 23px;
 }
 .filter-type-item {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
   color: var(--text-gray-1);
+}
+.catalog-search,
+.filter-name {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 400;
 }
 .filter-checkbox {
   opacity: 0;
@@ -1108,7 +1092,7 @@ header {
   height: 16px;
   border-radius: 2px;
   border: 1px solid var(--text-gray-1);
-  background-color: transparent;
+  background-color: #fff0;
   vertical-align: middle;
   margin-right: 8px;
   position: relative;
@@ -1121,8 +1105,7 @@ header {
   left: 50%;
   width: 10px;
   height: 10px;
-  background: url("../imgs/checkmark.svg") no-repeat center;
-  background-size: contain;
+  background: url(../imgs/checkmark.svg) center/contain no-repeat;
   transform: translate(-50%, -50%);
   opacity: 0;
 }
@@ -1151,16 +1134,9 @@ header {
   height: 48px;
   border: 0;
   padding: 0 40px 0 10px;
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
   color: var(--text-gray-2);
-  font-size: 16px;
-  background: url("../imgs/search-2.svg") no-repeat right center;
+  background: url(../imgs/search-2.svg) 95%/20px 20px no-repeat;
   background-color: var(--text-gray-3);
-  background-size: 20px 20px;
-  background-position: 95%;
 }
 .catalog-search::placeholder {
   color: var(--text-gray-2);
@@ -1168,11 +1144,16 @@ header {
 .current-filters {
   width: 1050px;
   height: 68px;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 20px;
   gap: 12px;
   display: flex;
   background-color: var(--back-gray-1);
   margin-top: 20px;
+}
+.clear-filters,
+.filter-btn {
+  background-color: #fff0;
+  border: 0;
 }
 .filter-list {
   display: flex;
@@ -1182,17 +1163,13 @@ header {
 .filter-item {
   height: 44px;
   gap: 10px;
-  border: 1px solid#41454A;
+  border: 1px;
   padding: 9px 13px 9px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .filter-name {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
   text-align: left;
   color: #f7f7f7;
 }
@@ -1200,8 +1177,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  border: 0;
 }
 .clear-filters {
   font-family: "Bakbak One", Arial, sans-serif;
@@ -1210,8 +1185,6 @@ header {
   line-height: 22px;
   text-align: left;
   color: var(--primary-green);
-  background-color: transparent;
-  border: 0;
 }
 .catalog-content-container {
   margin-left: 80px;
@@ -1241,6 +1214,7 @@ header {
   line-height: 28px;
   text-align: left;
 }
+.catalog-item-page .page-footer,
 .catalog-page .page-footer {
   display: flex;
   flex-direction: column;
@@ -1251,6 +1225,7 @@ header {
   padding: 0;
   position: relative;
 }
+.catalog-item-page .community-container,
 .catalog-page .community-container {
   position: absolute;
   top: 0;
@@ -1259,48 +1234,45 @@ header {
   width: 1410px;
   height: 246px;
   border-radius: 8px;
-  background-image: url("../imgs/community-star-2.svg"),
-    url("../imgs/community-star-3.svg"),
+  background-image: url(../imgs/community-star-2.svg),
+    url(../imgs/community-star-3.svg),
     linear-gradient(268.28deg, #2333de -1.34%, #0abe66 100%);
   background-repeat: no-repeat;
   background-size: 137px 137px, 321px 321px, cover;
   background-position: 28% 2%, right center, center center;
   overflow: hidden;
 }
+.catalog-item-page .community-container::before,
 .catalog-page .community-container::before {
-  content: url("../imgs/community-star-1.svg");
+  content: url(../imgs/community-star-1.svg);
   position: absolute;
   bottom: -10px;
   left: -10px;
   width: 100px;
   height: auto;
 }
-.catalog-page .community-header {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
-}
+.catalog-item-page .community-text,
 .catalog-page .community-text {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
   color: var(--text-white);
 }
+.catalog-item-page .community-btn,
 .catalog-page .community-btn {
-  margin: 0;
+  margin: 22px 0 0;
   padding: 0;
-  margin-top: 22px;
 }
+.catalog-item-page .footer-middle,
 .catalog-page .footer-middle {
   width: 1410px;
   display: flex;
   margin-top: 202px;
   justify-content: space-between;
 }
+.catalog-item-page .footer-header,
 .catalog-page .footer-header {
   width: 324px;
   height: 106px;
@@ -1308,6 +1280,7 @@ header {
   flex-direction: column;
   gap: 12px;
 }
+.catalog-item-page .footer-logo-container,
 .catalog-page .footer-logo-container {
   display: flex;
   align-items: center;
@@ -1316,14 +1289,16 @@ header {
   font-weight: 400;
   line-height: 42px;
 }
+.catalog-item-page .footer-text,
 .catalog-page .footer-text {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   text-align: left;
   color: var(--text-white);
 }
+.catalog-item-page .footer-navbar,
 .catalog-page .footer-navbar {
   display: flex;
   gap: 130px;
@@ -1334,19 +1309,24 @@ header {
   display: grid;
   gap: 16px;
 }
-.footer-navbar h3 {
+.catalog-item-page .footer-navbar h3,
+.catalog-item-page .subscription-container h3,
+.footer-navbar h3,
+.subscription-container h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: var(--text-white);
 }
+.catalog-item-page .footer-navbar a,
 .footer-navbar a {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   color: #c2c3c5;
 }
+.catalog-item-page .subscription-container,
 .subscription-container {
   margin-left: 130px;
   display: flex;
@@ -1354,198 +1334,9 @@ header {
   height: 100px;
   gap: 20px;
 }
-.subscribe-btn-container {
-  display: flex;
-}
-.subscription-container h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var(--text-white);
-}
+.catalog-item-page .footer-subscribe-input,
 .footer-subscribe-input {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  width: 287px;
-  height: 56px;
-  padding: 14px 24px 14px 24px;
-  border: 0;
-  background-color: var(--transparent-gray-4);
-  color: var(--text-gray-1);
-}
-.footer-subscribe-btn {
-  display: block;
-  width: 154px;
-  height: 56px;
-  padding: 12px 24px 12px 24px;
-  background-color: var(--primary-green);
-  border: 0;
-}
-.catalog-page .footer-navbar ul {
-  display: grid;
-  gap: 16px;
-  list-style-type: none;
-}
-.footer-bottom {
-  padding: 15px 0;
-  border: 1px solid #434343;
-  border-width: 1px 0 0 0;
-  background-color: var(--primary-black);
-  display: flex;
-  justify-content: space-between;
-  width: 1410px;
-}
-.catalog-page .footer-copyright {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: left;
-}
-.footer-bottom .social-list {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-.footer-bottom .social-list a {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: right;
-  color: var(--text-gray-1);
-}
-.catalog-item-page .page-footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 524px;
-  background-color: var(--primary-black);
-  border: 0;
-  padding: 0;
-  position: relative;
-}
-.catalog-item-page .community-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  width: 1410px;
-  height: 246px;
-  border-radius: 8px;
-  background-image: url("../imgs/community-star-2.svg"),
-    url("../imgs/community-star-3.svg"),
-    linear-gradient(268.28deg, #2333de -1.34%, #0abe66 100%);
-  background-repeat: no-repeat;
-  background-size: 137px 137px, 321px 321px, cover;
-  background-position: 28% 2%, right center, center center;
-  overflow: hidden;
-}
-.catalog-item-page .community-container::before {
-  content: url("../imgs/community-star-1.svg");
-  position: absolute;
-  bottom: -10px;
-  left: -10px;
-  width: 100px;
-  height: auto;
-}
-.catalog-item-page .community-header {
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 56px;
-  text-align: center;
-  color: var(--text-white);
-}
-.catalog-item-page .community-text {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  text-align: center;
-  color: var(--text-white);
-}
-.catalog-item-page .community-btn {
-  margin: 0;
-  padding: 0;
-  margin-top: 22px;
-}
-.catalog-item-page .footer-middle {
-  width: 1410px;
-  display: flex;
-  margin-top: 202px;
-  justify-content: space-between;
-}
-.catalog-item-page .footer-header {
-  width: 324px;
-  height: 106px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.catalog-item-page .footer-logo-container {
-  display: flex;
-  align-items: center;
-  font-family: "Bakbak One", Arial, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 42px;
-}
-.catalog-item-page .footer-text {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  color: var(--text-white);
-}
-.catalog-item-page .footer-navbar {
-  display: flex;
-  gap: 130px;
-  margin-left: 156px;
-}
-.catalog-item-page .footer-navbar ul {
-  margin-top: 20px;
-  display: grid;
-  gap: 16px;
-  list-style-type: none;
-  gap: 16px;
-}
-.catalog-item-page .footer-navbar h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var(--text-white);
-}
-.catalog-item-page .footer-navbar a {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  color: #c2c3c5;
-}
-.catalog-item-page .subscription-container {
-  margin-left: 130px;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  gap: 20px;
-}
-.catalog-item-page .subscribe-btn-container {
-  display: flex;
-}
-.catalog-item-page .subscription-container h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var(--text-white);
-}
-.catalog-item-page .footer-subscribe-input {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -1557,7 +1348,15 @@ header {
   background-color: var(--transparent-gray-4);
   color: var(--text-gray-1);
 }
-.catalog-item-page .footer-subscribe-btn {
+.countdown-heading,
+.countdown-spacer,
+.countdown-time,
+.time-tag {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-weight: 400;
+}
+.catalog-item-page .footer-subscribe-btn,
+.footer-subscribe-btn {
   display: block;
   width: 154px;
   height: 56px;
@@ -1565,40 +1364,42 @@ header {
   background-color: var(--primary-green);
   border: 0;
 }
-.catalog-item-page .footer-bottom {
+.catalog-page .footer-navbar ul {
+  display: grid;
+  gap: 16px;
+  list-style-type: none;
+}
+.catalog-item-page .footer-bottom,
+.footer-bottom {
   padding: 15px 0;
   border: 1px solid #434343;
-  border-width: 1px 0 0 0;
+  border-width: 1px 0 0;
   background-color: var(--primary-black);
   display: flex;
   justify-content: space-between;
   width: 1410px;
 }
-.catalog-item-page .footer-copyright {
-  font-family: "Poppins", Arial, sans-serif;
+.catalog-item-page .footer-copyright,
+.catalog-page .footer-copyright {
+  font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
 }
-.catalog-item-page .footer-bottom .social-list {
+.catalog-item-page .footer-bottom .social-list,
+.footer-bottom .social-list {
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
-.catalog-item-page .footer-bottom .social-list a {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: right;
-  color: var(--text-gray-1);
-}
-.catalog-item-page main {
-  background-color: var(--back-black-1);
-  width: 100%;
+.catalog-item-page .footer-navbar ul {
+  margin-top: 20px;
+  display: grid;
+  list-style-type: none;
+  gap: 16px;
 }
 .product-container {
   display: flex;
@@ -1624,9 +1425,7 @@ header {
   align-items: center;
 }
 .countdown-heading {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
-  font-weight: 400;
   line-height: 30px;
   color: var(--text-white);
 }
@@ -1648,23 +1447,17 @@ header {
   text-align: center;
 }
 .countdown-spacer {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 36px;
-  font-weight: 400;
   line-height: 44px;
   align-self: flex-start;
   color: var(--text-gray-1);
 }
 .countdown-time {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 44px;
-  font-weight: 400;
   line-height: 56px;
 }
 .time-tag {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 28px;
 }
 .product-heading {
@@ -1674,19 +1467,22 @@ header {
   text-align: left;
   color: var(--text-white);
 }
+.product-description,
+.tags-container dt {
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  color: #c2c3c5;
+}
 .product-description {
   margin-top: 24px;
   width: 620px;
   height: 90px;
-  font-family: "Poppins", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 30px;
-  text-align: left;
-  color: #c2c3c5;
 }
 .tags-container {
-  margin: 20px 0 30px 0;
+  margin: 20px 0 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -1699,40 +1495,42 @@ header {
   gap: 10px;
   background-color: var(--text-gray-3);
 }
+.discord-link,
+.product-buy-btn,
+.twitter-link {
+  height: 56px;
+  padding: 16px 24px;
+  gap: 8px;
+  display: flex;
+}
 .tags-container dt {
-  font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
   line-height: 26px;
+}
+.card-link,
+.collections-heading,
+.discord-link,
+.product-price,
+.tags-container dd,
+.twitter-link {
+  font-family: "Bakbak One", Arial, sans-serif;
+  font-weight: 400;
   text-align: left;
-  color: #c2c3c5;
+  color: var(--text-white);
 }
 .tags-container dd {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 24px;
-  font-weight: 400;
   line-height: 30px;
-  text-align: left;
-  color: var(--text-white);
 }
 .product-price {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 36px;
-  font-weight: 400;
   line-height: 44px;
-  text-align: left;
-  color: var(--text-white);
 }
 .product-buy-btn {
   margin-top: 40px;
   width: 620px;
-  height: 56px;
   top: 991px;
   left: 1045px;
-  padding: 16px 24px 16px 24px;
-  gap: 8px;
-  opacity: 0px;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary-green);
@@ -1745,20 +1543,11 @@ header {
 .discord-link,
 .twitter-link {
   width: 290px;
-  height: 56px;
-  padding: 16px 24px 16px 24px;
-  gap: 8px;
   border: 2px solid var(--text-gray-2);
-  opacity: 0px;
-  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
   line-height: 24px;
-  text-align: left;
-  color: var(--text-white);
 }
 .collections-container {
   display: flex;
@@ -1769,18 +1558,14 @@ header {
   overflow: hidden;
 }
 .collections-heading {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 44px;
-  font-weight: 400;
   line-height: 56px;
-  text-align: left;
-  color: var(--text-white);
 }
 .collection-cards {
   display: flex;
   list-style-type: none;
   gap: 30px;
-  margin: 40px 0 30px 0;
+  margin: 40px 0 30px;
 }
 .collection-card {
   width: 330px;
@@ -1789,12 +1574,8 @@ header {
   background-color: var(--transparent-gray-2);
 }
 .card-link {
-  font-family: "Bakbak One", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 28px;
-  text-align: left;
-  color: var(--text-white);
   width: 100%;
 }
 .scroll-btns {
@@ -1807,17 +1588,11 @@ header {
   width: 48px;
   height: 48px;
   border: 1px solid var(--primary-green);
-  background-color: transparent;
+  background-color: #fff0;
 }
 .collection-forward-btn {
   width: 48px;
   height: 48px;
   border: 0;
   background-color: var(--primary-green);
-}
-.collection-back-btn,
-.collection-forward-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
