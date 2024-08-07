@@ -63,8 +63,6 @@
           <img
             src="./imgs/wallet-2.svg"
             alt="connect wallet icon"
-            width="24"
-            height="24"
             class="icon"
           />
           CONNECT
@@ -326,29 +324,47 @@
               placeholder="Search NFT"
             />
           </div>
-          <div class="current-filters">
+          <form class="current-filters" action="#" method="post">
             <ul class="filter-list">
               <li class="filter-item">
                 <p class="filter-name">King</p>
-                <button class="filter-btn">
-                  <img src="./imgs/x.svg" alt="#" />
+                <button
+                  type="button"
+                  class="filter-btn"
+                  aria-label="Remove King filter"
+                >
+                  <img src="./imgs/x.svg" alt="Remove filter" />
                 </button>
               </li>
               <li class="filter-item">
                 <p class="filter-name">Mix</p>
-                <button class="filter-btn">
-                  <img src="./imgs/x.svg" alt="#" />
+                <button
+                  type="button"
+                  class="filter-btn"
+                  aria-label="Remove Mix filter"
+                >
+                  <img src="./imgs/x.svg" alt="Remove filter" />
                 </button>
               </li>
               <li class="filter-item">
                 <p class="filter-name">Sakura</p>
-                <button class="filter-btn">
-                  <img src="./imgs/x.svg" alt="#" />
+                <button
+                  type="button"
+                  class="filter-btn"
+                  aria-label="Remove Sakura filter"
+                >
+                  <img src="./imgs/x.svg" alt="Remove filter" />
                 </button>
               </li>
             </ul>
-            <button class="clear-filters">Clear All</button>
-          </div>
+            <button
+              type="button"
+              class="clear-filters"
+              aria-label="Clear all filters"
+            >
+              Clear All
+            </button>
+          </form>
           <div class="catalog-container">
             <ul>
               <li>
@@ -528,7 +544,6 @@
                 src="./imgs/community-3.svg"
                 alt="Youtube"
                 width="20"
-                height="14.81"
             /></a>
           </li>
           <li class="social-item">
@@ -546,7 +561,6 @@
                 src="./imgs/community-6.svg"
                 alt="Discord"
                 width="20"
-                height="14.78"
             /></a>
           </li>
         </ul>
