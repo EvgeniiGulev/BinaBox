@@ -347,17 +347,18 @@ header {
 }
 .nft-card-container {
   width: 100%;
-  height: max-content;
-  left: -105px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 204px;
+  overflow: hidden;
   overflow: hidden;
 }
 .nft-cards-list {
   display: flex;
-  position: relative;
   margin-top: 60px;
   gap: 30px;
-  left: -105px;
   list-style-type: none;
 }
 .nft-card {
@@ -478,10 +479,13 @@ header {
   border: 2px solid var(--text-green);
   margin-top: 30px;
 }
-.how-to-inner-container {
-  width: 1410px;
+.how-to-container {
+  width: 100%;
   height: 326px;
-  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .how-to-heading {
   font-size: 44px;
@@ -1761,7 +1765,7 @@ header {
   display: flex;
   list-style-type: none;
   gap: 30px;
-  margin-bottom: 30px;
+  margin: 40px 0 30px 0;
 }
 .collection-card {
   width: 330px;
@@ -1802,4 +1806,3 @@ header {
   justify-content: center;
   align-items: center;
 }
-
