@@ -3,16 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Catalog Item</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.svg" />
   </head>
-  <body>
+  <body class="catalog-item-page">
     <header class="page-header">
-      <a href="#">
-        <img src="#" alt="Logo" class="main-logo" />
+      <a href="./index.html" class="nav-logo">
+        <img
+          src="./imgs/logo-1.svg"
+          alt="binabox logo"
+          width="36"
+          height="40"
+          class="header-logo"
+        />
+        BINABOX
       </a>
       <nav>
         <ul class="navbar is-dropdown">
-          <li class="nav-home">
+          <li class="nav-item">
             <a href="./index.html">HOME</a>
           </li>
           <li class="nav-item">
@@ -22,7 +41,7 @@
             <a href="#">ROADMAP</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-collection-link">COLLECTION</a>
+            <a href="#">COLLECTION</a>
           </li>
           <li class="nav-item">
             <a href="#">FAQS</a>
@@ -32,129 +51,221 @@
           </li>
         </ul>
       </nav>
-      <div class="is-theme">
-        <img src="#" alt="Light/Dark Mode" />
-      </div>
       <div class="header-btn">
-        <a href="#" class="discord-btn">
-          <img src="#" alt="Discord" />
+        <button class="is-theme">
+          <img src="./imgs/light.svg" alt="light and dark mode button" />
+        </button>
+        <a href="https://discord.com/" target="_blank" class="discord-btn">
+          <img src="./imgs/discord-original.svg" alt="discord icon" />
           DISCORD
         </a>
         <a href="#" class="connect-btn">
-          <img src="#" alt="Connect Wallet" />
+          <img
+            src="./imgs/wallet-2.svg"
+            alt="connect wallet icon"
+            class="icon"
+          />
           CONNECT
         </a>
       </div>
     </header>
-    <main class="main-container">
+    <main>
       <section class="page-banner">
-        <h1 class="banner-heading">EXPLORE COLLECTIONS</h1>
-        <ul class="banner-list">
-          <li class="banner-item">
-            <a href="./index.html" class="banner-link">HOME</a>
-          </li>
-          <li class="banner-item">
-            <a href="#" class="banner-link color-highlight">COLLECTIONS</a>
-          </li>
-        </ul>
-      </section>
-      <figure class="product-img">
-        <img src="#" alt="Product" />
-        <div class="countdown">
-          <p class="countdown-heading">PUBLIC END IN</p>
-          <ul class="countdown-list">
-            <li class="countdown-item">
-              <div class="countdown-day">
-                <p class="day-time">16</p>
-                <p class="time-tag"></p>
-              </div>
+        <div class="banner-text-container">
+          <h1 class="banner-heading">ITEM DETAIL</h1>
+          <ul class="banner-list">
+            <li class="banner-item">
+              <a href="./index.html" class="banner-link">HOME</a>
             </li>
-            <li class="countdown-spacer">:</li>
-            <li class="countdown-item">
-              <div class="countdown-hour">
-                <p class="hour-time">20</p>
-                <p class="time-tag"></p>
-              </div>
-            </li>
-            <li class="countdown-spacer">:</li>
-            <li class="countdown-item">
-              <div class="countdown-minute">
-                <p class="minute-time">11</p>
-                <p class="time-tag"></p>
-              </div>
-            </li>
-            <li class="countdown-spacer">:</li>
-            <li class="countdown-item">
-              <div class="countdown-second">
-                <p class="second-time">08</p>
-                <p class="time-tag"></p>
-              </div>
+            <li class="banner-item">
+              <a href="#" class="banner-link color-highlight">ITEM DETAIL</a>
             </li>
           </ul>
         </div>
-      </figure>
-      <section class="product-details">
-        <h2 class="product-heading">SKISIRS#4587</h2>
-        <p class="product-description">
-          As the first hero of the Neoh Universe, collection has over 9,999
-          unique skins drawn from the different missions and challenges he faced
-          throughout his life.
-        </p>
-        <dl>
-          <dt>Clothing</dt>
-          <dd>SNAKE</dd>
-          <dt>Eyes</dt>
-          <dd>MIX</dd>
-          <dt>Face</dt>
-          <dd>GREEN</dd>
-          <dt>Skin</dt>
-          <dd>GREEN</dd>
-          <dt>Background</dt>
-          <dd>Green Light</dd>
-          <dt>Special</dt>
-          <dd>CAT</dd>
-        </dl>
-        <p class="product-price">
-          PRICE: <mark class="color-highlight">0.15 ETH</mark>
-        </p>
-        <button class="product-buy-btn">
-          <img src="#" alt="BagIcon" />BUY ON OPENSEA
-        </button>
-        <a href="#" class="discord-link"
-          ><img src="#" alt="DiscordIcon" />Discord</a
-        >
-        <a href="#" class="twitter-link"
-          ><img src="#" alt="TwitterIcon" />Twitter</a
-        >
       </section>
+      <div class="product-container">
+        <figure class="product-img">
+          <img
+            src="./imgs/skeleton.svg"
+            alt="descriptive product alt goes here"
+          />
+          <div class="countdown">
+            <p class="countdown-heading">PUBLIC END IN</p>
+            <ul class="countdown-list">
+              <li class="countdown-item">
+                <div class="countdown-day">
+                  <p class="day-time countdown-time">16</p>
+                  <p class="time-tag">DAYS</p>
+                </div>
+              </li>
+              <li class="countdown-spacer">:</li>
+              <li class="countdown-item">
+                <div class="countdown-hour">
+                  <p class="hour-time countdown-time">20</p>
+                  <p class="time-tag">HOURS</p>
+                </div>
+              </li>
+              <li class="countdown-spacer">:</li>
+              <li class="countdown-item">
+                <div class="countdown-minute">
+                  <p class="minute-time countdown-time">11</p>
+                  <p class="time-tag">MINUTES</p>
+                </div>
+              </li>
+              <li class="countdown-spacer">:</li>
+              <li class="countdown-item">
+                <div class="countdown-second">
+                  <p class="second-time countdown-time">08</p>
+                  <p class="time-tag">SECONDS</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </figure>
+        <section class="product-details">
+          <h2 class="product-heading">SKISIRS#4587</h2>
+          <p class="product-description">
+            As the first hero of the Neoh Universe, collection has over 9,999
+            unique skins drawn from the different missions and challenges he
+            faced throughout his life.
+          </p>
+          <dl class="tags-container">
+            <div class="tag-container">
+              <dt>Clothing</dt>
+              <dd>SNAKE</dd>
+            </div>
+            <div class="tag-container">
+              <dt>Eyes</dt>
+              <dd>MIX</dd>
+            </div>
+            <div class="tag-container">
+              <dt>Face</dt>
+              <dd>GREEN</dd>
+            </div>
+            <div class="tag-container">
+              <dt>Skin</dt>
+              <dd>GREEN</dd>
+            </div>
+            <div class="tag-container">
+              <dt>Background</dt>
+              <dd>Green Light</dd>
+            </div>
+            <div class="tag-container">
+              <dt>Special</dt>
+              <dd>CAT</dd>
+            </div>
+          </dl>
+          <p class="product-price">
+            PRICE: <mark class="color-highlight">0.15 ETH</mark>
+          </p>
+          <form action="">
+            <label class="hidden-heading" for="buy-opensea"
+              >Buy on OpenSea</label
+            >
+            <button id="buy-opensea" class="product-buy-btn" type="submit">
+              <img src="./imgs/bag.svg" alt="Bag icon" />
+              BUY ON OPENSEA
+            </button>
+          </form>
+          <div class="invitation-container">
+            <a href="https://discord.com/" target="_blank" class="discord-link"
+              ><img src="./imgs/discord-original.svg" alt="DiscordIcon" />JOIN
+              DISCORD</a
+            >
+            <a href="#" class="twitter-link"
+              ><img src="./imgs/twitter-1.svg" alt="TwitterIcon" />JOIN
+              TWITTER</a
+            >
+          </div>
+        </section>
+      </div>
       <section class="collections-container">
-        <h2 class="hidden-heading">Collection of nft products</h2>
-        <ul>
+        <h2 class="collections-heading">EXPLORE COLLECTIONS</h2>
+        <ul class="collection-cards">
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-1.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-2.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-3.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-4.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-5.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
           <li class="collection-card">
-            <img src="#" alt="Icon" class="collection-card-img" />
-            <a class="card-link">SKISIRS#2</a>
+            <div class="nft-content-container">
+              <img
+                src="./imgs/nft-card-6.jpg"
+                alt="good alt description"
+                class="collection-card-img"
+              />
+              <a class="card-link">SKISIRS#2</a>
+            </div>
           </li>
         </ul>
+        <form class="scroll-btns" action="">
+          <label class="hidden-heading" for="scroll-back">Navigate Back</label>
+          <button
+            id="scroll-back"
+            type="button"
+            class="collection-back-btn"
+            aria-label="Go Back"
+          >
+            <img src="./imgs/arrow-left-3.svg" alt="left arrow" />
+          </button>
+
+          <label class="hidden-heading" for="scroll-forward"
+            >Navigate Forward</label
+          >
+          <button
+            id="scroll-forward"
+            type="button"
+            class="collection-forward-btn"
+            aria-label="Go Forward"
+          >
+            <img src="./imgs/arrow-right-3.svg" alt="right arrow" />
+          </button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
@@ -165,66 +276,130 @@
           industry.
         </p>
         <div class="community-btn">
-          <a href="#" class="discord-btn">
-            <img src="#" alt="Discord" />
+          <a
+            href="https://discord.com/"
+            target="_blank"
+            class="community-discord-btn"
+          >
+            <img src="./imgs/discord-original.svg" alt="Discord" />
             DISCORD
           </a>
-          <a href="#" class="community-whitelist-btn whitelist-btn">
-            WHITELIST NOW
-          </a>
+          <a href="#" class="community-whitelist-btn"> WHITELIST NOW </a>
         </div>
       </section>
-      <div class="footer-header">
-        <a href="#">
-          <img src="#" alt="Logo" class="footer-logo" />
-          BINABOX
-        </a>
-        <p class="footer-text">
-          We are the best way to check the rarity of NFT collection.
-        </p>
-      </div>
-      <nav class="footer-navbar">
-        <div class="navbar-left">
+      <div class="footer-middle">
+        <div class="footer-header">
+          <a href="#" class="footer-logo-container">
+            <img
+              src="./imgs/logo-1.svg"
+              alt="Logo"
+              class="footer-logo"
+              width="32"
+              height="36"
+            />
+            BINABOX
+          </a>
+          <p class="footer-text">
+            We are the best way to check the rarity of NFT collection.
+          </p>
+        </div>
+        <nav class="footer-navbar">
+          <div class="navbar-left">
+            <h3>SUBSCRIBE</h3>
+            <ul class="navbar-list">
+              <li class="navbar-link"><a href="./index.html">Home</a></li>
+              <li class="navbar-link"><a href="#">About</a></li>
+              <li class="navbar-link"><a href="#">Roadmap</a></li>
+              <li class="navbar-link"><a href="#">Our Team</a></li>
+              <li class="navbar-link"><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="navbar-right">
+            <h3>COMPANY</h3>
+            <ul class="navbar-list">
+              <li class="navbar-link"><a href="#">Terms Conditions</a></li>
+              <li class="navbar-link"><a href="#">Privacy Policy</a></li>
+              <li class="navbar-link"><a href="#">Whitepaper</a></li>
+              <li class="navbar-link"><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="subscription-container">
           <h3>SUBSCRIBE</h3>
-          <ul class="navbar-list">
-            <li class="navbar-link"><a href="./index.html">Home</a></li>
-            <li class="navbar-link"><a href="#">About</a></li>
-            <li class="navbar-link"><a href="#">Roadmap</a></li>
-            <li class="navbar-link"><a href="#">Our Team</a></li>
-            <li class="navbar-link"><a href="#">FAQs</a></li>
-          </ul>
+          <form class="subscribe-btn-container">
+            <label class="hidden-heading" for="subscribe-email"
+              >Email for subscription</label
+            >
+            <input
+              type="email"
+              id="subscribe-email"
+              placeholder="Enter your Email"
+              class="footer-subscribe-input"
+              required
+            />
+            <button class="footer-subscribe-btn" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
         </div>
-        <div class="navbar-right">
-          <h3>COMPANY</h3>
-          <ul class="navbar-list">
-            <li class="navbar-link"><a href="#">Terms Conditions</a></li>
-            <li class="navbar-link"><a href="#">Privacy Policy</a></li>
-            <li class="navbar-link"><a href="#">Whitepaper</a></li>
-            <li class="navbar-link"><a href="#">Help Center</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Subscribe goes here :> -->
+      </div>
       <div class="footer-bottom">
         <p class="footer-copyright">BINABOX 2022 - ALL rights reserved</p>
         <ul class="social-list">
           <li class="social-item">
-            <a href="#"><img src="#" alt="X/Twitter" /></a>
+            <a href="https://x.com/" target="_blank"
+              ><img
+                src="./imgs/community-1.svg"
+                alt="X/Twitter"
+                width="20"
+                height="20"
+            /></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link"><img src="#" alt="Facebook" /></a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="social-link"
+              ><img
+                src="./imgs/community-5.svg"
+                alt="Facebook"
+                width="20"
+                height="20"
+            /></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link"><img src="#" alt="Telegram" /></a>
+            <a href="https://telegram.org/" target="_blank" class="social-link"
+              ><img
+                src="./imgs/community-4.svg"
+                alt="Telegram"
+                width="20"
+                height="18"
+            /></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link"><img src="#" alt="Youtube" /></a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              class="social-link"
+              ><img src="./imgs/community-3.svg" alt="Youtube" width="20"
+            /></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link"><img src="#" alt="TikTok" /></a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              class="social-link"
+              ><img
+                src="./imgs/community-2.svg"
+                alt="TikTok"
+                width="20"
+                height="20"
+            /></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link"><img src="#" alt="Discord" /></a>
+            <a href="https://discord.com/" target="_blank" class="social-link"
+              ><img src="./imgs/community-6.svg" alt="Discord" width="20"
+            /></a>
           </li>
         </ul>
       </div>
